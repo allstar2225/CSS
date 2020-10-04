@@ -1,0 +1,86 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- html5 전용 css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- background-color -</h1>
+    <p> &plus; 태그 내의 배경색</p>
+    <p style="background-color: royalblue; color: white;">p태그 내의 배경색 변경</p>
+
+    <hr>
+    <h1>- background-image -</h1>
+    <p> &plus; 태그 내의 이미지</p>
+    <section style="background-image: url(../img/welsh.jpeg); width: 400px; height: 400px;"></section>
+    </section>
+
+    <hr>
+    <h1>- background-repeat -</h1>
+    <p> &plus; 태그 내의 이미지를 x축 혹은 y축으로 반복하여 보여준다. (body에서 자주 사용)</p>
+    <section
+        style="
+        background-image: url(../img/welsh.jpeg);
+        width: 1000px; 
+        height: 1000px; 
+        background-repeat: repeat-x;
+        ">
+    </section>
+    <section
+        style="
+        background-image: url(../img/welsh.jpeg); 
+        width: 1000px; 
+        height: 1000px; 
+        background-repeat: repeat-y;
+        ">
+    </section>
+
+    <hr>
+    <h1>- background-position -</h1>
+    <p> &plus; 현재 태그 내의 이미지 위치를 지정한다.</p>
+    <section
+        style="
+        background-image: url(../img/welsh.jpeg); width: 1000px; height: 1000px; 
+        background-repeat: no-repeat;
+        background-position: top right;
+        ">
+    </section>
+
+    <hr>
+    <h1>- background-attachment -</h1>
+    <p> &plus; 현재 태그 내의 이미지를 해당위치에 고정시킨다.</p>
+    <section
+        style="
+        background-image: url(../img/welsh.jpeg); width: 1000px; height: 1000px; 
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-attachment: fixed;
+        ">
+    </section>
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

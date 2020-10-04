@@ -1,0 +1,56 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- html5 전용 css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title> CSS tag 모음</title>
+
+    <!-- 내부(internal) 스타일 시트 -->
+    <style>
+        #plus {
+            color: coral;
+        }
+    </style>
+
+</head>     
+
+<body>
+
+    <h1>- 인라인(inline) 스타일 sheet -</h1>
+    <p> &plus; HTML태그에 직접 사용한다.</p>
+    <p style="color: brown; font-family:'Times New Roman', Times, serif">p태그에 직접 스타일적용</p>
+
+    <hr>
+    <h1>- 내부(internal) 스타일 sheet -</h1>
+    <p> &plus; head태그 내부에 style태그를 정의 하여 사용</p>
+    <p id="plus">head태그 내부의 style태그를 적용</p>
+
+    <hr>
+    <h1>- 외부 (External) 스타일 sheet -</h1>
+    <p> &plus; 외부에 있는 css파일을 import하여 사용한다.</p>
+    <p class="plus">외부에 있는 style.css파일 import하여 적용된 모습</p>
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
