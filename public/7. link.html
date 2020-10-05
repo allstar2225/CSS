@@ -1,0 +1,87 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* a link 상태 */
+        /* 
+        link : 아무것도 안한상태 
+        visited : 한번 방문한 상태
+        hover : 마우스를 올렸을 때
+        active : 클릭하고 있을때
+        focus : 객체가 포커스를 가지고 있을 때
+        */
+        a:link , a:visited { 
+        background-color: lawngreen;
+        color: maroon;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block
+        }
+        a:hover, a:active { background-color: orange;}
+        a:focus { color:lawngreen}
+        
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- 기본적인 초기 상태. -</h1>
+    <p> &plus; 아래의 버튼을 누르면 해당 사이트로 혹은 페이지로 넘어간다</p>
+    <a href="https://www.google.com">google로 연결</a>
+
+    <h1>- style 적용 -</h1>
+    <p> &plus; 배경색, 글자색, 사이즈, 밑줄선 제거</p>
+    <a href="https://www.google.com" 
+    style="
+    background-color:black; 
+    color: coral; 
+    font-size:1.5rem;
+    text-decoration: none;">
+    google로 연결
+    </a>
+
+    <h1>- 현재 상태 -</h1>
+    <p> &plus; 기본상태, 한번 방문한 상태, 커서를 올렸을때, 클릭하고 있을때, 포커스를 가지고 있을때 </p>
+    <a href="https://www.google.com" > 현재 방문 상태 </a>
+
+    <h1>- 버튼형식으로 만들기 -</h1>
+    <p> &plus; 위의 모든걸 종합 </p>
+    <a href="https://www.google.com" > 버튼 </a>
+
+
+
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
