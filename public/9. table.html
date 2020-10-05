@@ -1,0 +1,142 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {
+
+        }
+        .class {
+
+        }
+
+        tr:hover { background-color: salmon;}
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- border -</h1>
+    <p> &plus; 테두리를 만든다</p>
+    <table style="border: 1px solid black;">
+        <tr>
+            <th style="border: 1px solid black;">헤드1</th>
+            <th style="border: 1px solid black;">헤드2</th>
+            <th style="border: 1px solid black;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">내용1</td>
+            <td style="border: 1px solid black;">내용2</td>
+            <td style="border: 1px solid black;">내용3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>- border-collapse -</h1>
+    <p> &plus; 줄을 하나로 맞춘다</p>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th style="border: 1px solid black;">헤드1</th>
+            <th style="border: 1px solid black;">헤드2</th>
+            <th style="border: 1px solid black;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">내용1</td>
+            <td style="border: 1px solid black;">내용2</td>
+            <td style="border: 1px solid black;">내용3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>- border-spacing -</h1>
+    <p> &plus; th와 th간의 여백을 만든다. 이때 collpase는 separate로 맞춘다.</p>
+    <table style="border: 1px solid black; border-collapse: separate; border-spacing: 10px 10px;">
+        <tr>
+            <th style="border: 1px solid black;">헤드1</th>
+            <th style="border: 1px solid black;">헤드2</th>
+            <th style="border: 1px solid black;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">내용1</td>
+            <td style="border: 1px solid black;">내용2</td>
+            <td style="border: 1px solid black;">내용3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>- text-align -</h1>
+    <p> &plus; th와 td의 수평 정렬</p>
+    <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+        <tr>
+            <th style="border: 1px solid black; text-align: left;">헤드1</th>
+            <th style="border: 1px solid black; text-align: left;">헤드2</th>
+            <th style="border: 1px solid black; text-align: left;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; text-align: center;">내용1</td>
+            <td style="border: 1px solid black; text-align: center;">내용2</td>
+            <td style="border: 1px solid black; text-align: center;">내용3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>- vertical-align -</h1>
+    <p> &plus; th와 td의 수직 정렬</p>
+    <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+        <tr>
+            <th style="border: 1px solid black; text-align: center; vertical-align: top; height: 50px;">헤드1</th>
+            <th style="border: 1px solid black; text-align: center; vertical-align: top; height: 50px;">헤드2</th>
+            <th style="border: 1px solid black; text-align: center; vertical-align: top; height: 50px;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black; text-align: center; vertical-align: bottom; height: 50px;">내용1</td>
+            <td style="border: 1px solid black; text-align: center; vertical-align: bottom; height: 50px;">내용2</td>
+            <td style="border: 1px solid black; text-align: center; vertical-align: bottom; height: 50px;">내용3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>- 여러가지 형태. -</h1>
+    <p> &plus; underline 및 hover 적용한 table</p>
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <th style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: top; height: 50px;">헤드1</th>
+            <th style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: top; height: 50px;">헤드2</th>
+            <th style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: top; height: 50px;">헤드3</th>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: bottom; height: 50px;">내용1</td>
+            <td style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: bottom; height: 50px;">내용2</td>
+            <td style="padding: 10px; border-bottom: 1px solid red; text-align: center; vertical-align: bottom; height: 50px;">내용3</td>
+        </tr>
+    </table>
+
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

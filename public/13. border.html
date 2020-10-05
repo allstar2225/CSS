@@ -1,0 +1,110 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+        /* p태그 hover 설정 */
+        p:hover{background-color: silver;}
+
+        /* 선의 종류 */
+        .dotted { border-style: dotted; }
+        .dashed { border-style: dashed;}
+        .solid { border-style: solid;}
+        .double { border-style: double;}
+        .groove { border-style: groove;}
+        .ridge { border-style: ridge;}
+        .inset { border-style: inset;}
+        .outset { border-style: outset;}
+        .none { border-style: none;}
+        .hidden { border-style: hidden;}
+        .mix { border-style: solid double ridge hidden;}
+
+        /* 선의 두께 */
+        .pixel { border-style: ridge; border-width: 10px;}
+        .thin { border-style: ridge; border-width: thin;}
+        .thick { border-style: ridge; border-width: thick;}
+        .width-mix { border-style: ridge; border-width: 2px 3px thin thick; }
+
+        /* 선의 색깔 */
+        .color1, .color2, .color3 {
+            border-style: solid;
+            border-width: 3px;
+        }
+        .color1 { border-color: red; }
+        .color2 { border-color: blue; }
+        .color3 { border-color: blue red green yellow; }
+
+        /* 전체 width */
+        .dotted, .dashed, .solid, .double, .groove, .ridge, .inset, .outset, .none, .hidden, .mix, .pixel, .thin, .thick, .width-mix, .color1, .color2, .color3 {
+            max-width: 50%;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- border 선의 종류들 -</h1>
+    <p> &plus; 각종 선들의 스타일</p>
+    <p class="dotted"> dotted 속성의 선</p>
+    <p class="dashed"> dashed 속성의 선</p>
+    <p class="solid"> solid 속성의 선</p>
+    <p class="double"> double 속성의 선</p>
+    <p class="groove"> groove 속성의 선</p>
+    <p class="ridge"> ridge 속성의 선</p>
+    <p class="inset"> inset 속성의 선</p>
+    <p class="outset"> outset 속성의 선</p>
+    <p class="none"> none 속성의 선</p>
+    <p class="hidden"> hidden 속성의 선</p>
+    <p class="mix"> 여러가지를 섞은 속성의 선</p>
+
+    <hr>
+    <h1>- border-width -</h1>
+    <p> &plus; 선의 두께</p>
+    <p class="pixel"> 10px 설정</p>
+    <p class="thin"> thin 설정</p>
+    <p class="thick"> thick 설정</p>
+    <p class="width-mix"> width-mix 설정</p>
+
+    <hr>
+    <h1>- border-color -</h1>
+    <p> &plus; 선의 색깔</p>
+    <p class="color1"> red 설정</p>
+    <p class="color2"> blue 설정</p>
+    <p class="color3"> 여러가지 설정</p>
+
+
+    
+
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

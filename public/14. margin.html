@@ -1,0 +1,106 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* margin 기본설정 */
+        div.mar {
+            background-color: #7f6f78;
+            border: 3px solid black;
+            color: blanchedalmond;
+            text-align: center;
+            max-width: 10%;
+            margin-top: -30px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+            margin-left: 70px;
+        }
+
+        /* inherit */
+        div.inh1 {
+            background-color: rgba(100, 100, 100, 1);
+            border: 3px solid black;
+            height: 100px;
+            margin-left: 100px;
+        }
+        div.inh2 {
+            background-color: rgba(150, 150, 150, 1);
+            border: 3px solid black;
+            margin-left: inherit;
+        }
+
+        /* auto */
+        div.auto {
+            background-color: rgba(100, 100, 100, 1);
+            border: 3px solid black;
+            color: yellow;
+            height: 60px;
+        }
+        div.auto1 {
+            background-color: rgba(200, 200, 100, 1);
+            border: 3px solid black;
+            margin: 0 auto;
+            color: black;
+            max-width: 10%;
+        }
+        .auto, .auto1 {
+            text-align: center;
+        }
+
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- margin -</h1>
+    <p> &plus; border의 바깥쪽 요소와의 간격을 설정한다. </p>
+    <div> 아무것도 안되있는 div </div><br>
+    <div class="mar">margin 적용 div</div><br>
+
+    <h1>- margin inherit -</h1>
+    <p> &plus; 부모 margin값을 그대로 물려받는다 </p>
+    <div class="inh1">
+        부모 div의 margin-left값(100px)가
+        <div class="inh2">자식 div에 그대로 물여받는다</div>
+    </div>
+
+    <h1>- margin auto -</h1>
+    <p> &plus; 수평방향 margin을 자동으로 설정 </p>
+    <div class="auto">
+        내부의 자식 div의 위치가
+        <div class="auto1">자동으로 수평margin 조정</div>
+    </div>
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

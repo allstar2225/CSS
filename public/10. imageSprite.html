@@ -1,0 +1,95 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        #image1,
+        #image2,
+        #image3,
+        #image4 {
+            background: url(../img/welsh.jpeg) no-repeat;
+        }
+
+        #image1 {
+            width: 100px;
+            height: 100px;
+            background-position: 0 0;
+        }
+
+        #image2 {
+            width: 100px;
+            height: 100px;
+            background-position: -21px 0;
+        }
+
+        #image3 {
+            width: 100px;
+            height: 100px;
+            background-position: -42px 0;
+        }
+
+        #image4 {
+            width: 100px;
+            height: 100px;
+            background-position: -65 0;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- imagesprite -</h1>
+    <p> &plus; 하나의 이미지를 여러위치에 놓을수 있다.</p>
+    <p>원본</p>
+    <img src="../img/welsh.jpeg" alt="dog"><br><br>
+
+    <p>추출이미지</p>
+    <figure>
+        <div id="image1"></div><br>
+        <figcaption>이미지1</figcaption>
+    </figure>
+    <figure>
+        <div id="image2"></div><br>
+        <figcaption>이미지2</figcaption>
+    </figure>
+    <figure>
+        <div id="image3"></div><br>
+        <figcaption>이미지3</figcaption>
+    </figure>
+    <figure>
+        <div id="image4"></div><br>
+        <figcaption>이미지4</figcaption>
+    </figure>
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

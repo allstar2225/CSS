@@ -1,0 +1,70 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 기본 div */
+        div {
+            background-color: salmon;
+            border: 2px solid black;
+        }
+        
+        /* padding 적용 div */
+        div.com {
+            background-color: salmon;
+            border: 2px solid black;
+            padding-top: 50px;
+            padding-right: 40px;
+            padding-bottom: 100px;
+            padding-left: 10px;
+        }
+        /* 축약하여 사용 */
+        div#com {
+            background-color: salmon;
+            border: 2px solid black;
+            /* top right bottom left */
+            padding: 50px 40px;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- padding -</h1>
+    <p> &plus; content와 border간의 위 아래 왼쪽 오른쪽의 간격을 말한다.</p>
+    <div> 아무것도 안되있는 div </div><br>
+    <div class="com"> padding 적용</div><br>
+    <div id="com"> padding 적용(한줄로 통일</div>
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

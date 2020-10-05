@@ -1,0 +1,119 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* li의 block요소를 inline으로 변경 */
+        /* 바뀐다고 해서 원래 그자체의 태그성질이 바뀌는것은 아니다. */
+        /* 즉, inline을 block으로 바꾼다 하여도 내부에 다른 요소를 담을수 없다 */
+        li { display: inline; }
+
+        /* inline-block */
+        div {
+            width: 100px; height: 100px;
+            color: white;
+        }
+        .first { background-color: blue; }
+        .second { background-color: blueviolet; }
+        .third { background-color: brown; }
+
+        .inline { display: inline; }
+        .inline-block { display: inline-block; }
+
+        /* visibility */
+        p.vis{ background-color: brown; color: burlywood; }
+        p.hid{ background-color: chartreuse;}
+        p.col{ background-color: darkblue; color:white}
+        
+        /* opacity */
+        img.dog {
+            opacity: 0.4;
+            filter: alpha(opacity= 40);
+        }
+        img.dog:hover{ opacity: 1.0; filter: alpha(opacity=100);}
+        
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- block 태그 -</h1>
+    <p> &plus; div, h1~6, p, ul, ol, form 등이 있다.</p>
+
+    <hr>
+    <h1>- inline 태그 -</h1>
+    <p> &plus; span, a, img 등이 있다.</p>
+
+    <hr>
+    <h1>- display 설정값 변경 -</h1>
+    <p> &plus; block 요소를 inline으로, inline을 block으로 바꿀수 있다.</p>
+    <ul>
+        <li><a href="../public/12. padding.html">padding</a></li>
+        <li><a href="../public/1. about CSS.html">css에 대해서</a></li>
+        <li><a href="../public/2. relation.html">스타일시트 연결</a></li>
+    </ul>
+
+    <hr>
+    <h1>- inline-block -</h1>
+    <p> &plus; inline의 속성처럼 수평으로 나열되지만, block으로서의 특징을 가지고 있다.</p>
+    <p> &num; block </p>
+    <div class="first">block 첫번째</div>
+    <div class="second">block 두번째</div>
+    <div class="third">block 세번째</div>
+
+    <p> &num; inline </p>
+    <div class="first inline">inline 첫번째</div>
+    <div class="second inline">inline 두번째</div>
+    <div class="third inline">inline 세번째</div>
+
+    <p> &num; inline-block </p>
+    <div class="first inline-block">inline-block 첫번째</div>
+    <div class="second inline-block">inline-block 두번째</div>
+    <div class="third inline-block">inline-block 세번째</div>
+
+    <hr>
+    <h1>- visibility-</h1>
+    <p> &plus; HTML 태그가 표현될지 아닐지만 결정.</p>
+    <div style="visibility: visible;"><p class="vis">visible : 나타낸다</p></div>
+    <div style="visibility: hidden;"><p class="hid"> hidden : 숨겨둔다 </p></div>
+    <div style="visibility: collapse;"><p cla="col"> collapse : 동적인 테이블에서만 사용. 테두리를 한줄만 보여준다 </p></div>
+
+    <hr>
+    <h1>- opacity -</h1>
+    <p> &plus; 이미지를 투명화함. 0.0~1.0까지 이며 0에 가까울수록 투명하다. 익스플로러 8이하 버전은 filter를 사용하여 투명도를 조절</p>
+    <img class="dog" src="../img/welsh.jpeg" alt="dog">
+
+
+
+    <hr>
+    <p><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
