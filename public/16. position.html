@@ -1,0 +1,106 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+        
+        /* 기본적인 도트방식 선 */
+        div {
+            border: 3px dotted black;
+        }
+        /* static */
+        div.static {position: static;}
+        /* relative (30px만큼 왼쪽 간격 띄워줌) */
+        div.relative {position: relative; left: 30px;}
+        /* fixed */
+        div.fixed {position: fixed; top: 400px}
+        /* absolute */
+        div.absolute {position: absolute;}
+
+        /* z-index */
+        .box-size {
+            width: 180px;
+            height: 180px;
+        }
+        .static {
+            position: static;
+            background-color: thistle;
+        }
+        .top {
+            background-color: teal;
+            position: relative;
+            top: -150px;
+            left: 30px;
+            z-index: 1;
+        }
+        .bottom {
+            background-color:violet;
+            position: relative;
+            top: -150px;
+            left: 30px;
+            z-index: -1;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- static(정적 위치) -</h1>
+    <p> &plus; html의 가장 기본적인 위치(좌측상단 0, 0)에서 어떠한 값도 영향을 받지 않는다.</p>
+    <div class="static"> static 포지션</div>
+
+    <hr>
+    <h1>- relative(상대 위치) -</h1>
+    <p> &plus; html의 가장 기본적인 위치(좌측상단 0, 0)를 기준으로 위치를 지정</p>
+    <div class="relative"> relative 포지션</div>
+
+    <hr>
+    <h1>- fixed(고정 위치) -</h1>
+    <p> &plus; viewport를 기준으로 스크롤이 되어도 정해진 위치에 고정되어있는다.</p>
+    <div class="fixed"> fixed 포지션</div>
+
+    <hr>
+    <h1>- absolute(절대 위치) -</h1>
+    <p> &plus; viewport를 기준으로 지정되지만, 부모포지션에서 지정된 position 속성에 따라서 결정된다.</p>
+    <div class="absolute"> absolute 포지션</div>
+
+    <hr>
+    <h1>- z-index -</h1>
+    <p> &plus; 요소를 겹치게 둘수 있다. -9999 ~ 9999까지 가능하며 클수록 맨앞에 나오게 된다.</p>
+    <div class="static box-size"> static 라인 </div>
+    <div class="top box-size"> z-index 1 라인 </div>
+    
+    <div class="static box-size"> static 라인 (이 뒤의 박스가 z-index -1로 설정되어있음)</div>
+    <div class="bottom box-size"> z-index -1 라인</div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

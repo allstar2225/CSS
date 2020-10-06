@@ -1,0 +1,96 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* margin */
+        div.mar {
+            border: 3px double black;
+            background-color: #724b4b;
+            margin: auto;
+            width: 50%;
+            height: 200px;
+            color: white;
+            
+        }
+
+        /* position */
+        div.box{
+            position: static;
+            border: 3px solid black;
+            width: 100%;
+            height: 400px;
+        }
+        div.pos {
+            position: absolute;
+            border: 3px double black;
+            background-color: #da9393;
+            top: 600px;
+            right: 500px;
+        }
+        /* float */
+        .ex-box {
+            border: 3px solid black;
+            width: 50%;
+            height: 50px;
+        }
+        .flo1 {
+            float: left;
+        }
+        .flo2 {
+            float: right;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- margin align -</h1>
+    <p> &plus; margin을 사용하여 수평 정렬</p>
+        <div class="mar"> margin으로 수평정렬한다.</div>
+
+    <hr>
+    <h1>- position align -</h1>
+    <p> &plus; position 사용하여 위치 정렬</p>
+    <div class="box">
+        <div class="pos"> position의 absolute로 원하는 위치에 정렬한다.</div>
+    </div>
+
+    <hr>
+    <h1>- float align -</h1>
+    <p> &plus; float 사용하여 수평 정렬</p>
+    <div class="ex-box flo1">float의 left 속성</div>
+    <div class="ex-box flo2">float의 right 속성</div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

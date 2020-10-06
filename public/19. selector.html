@@ -1,0 +1,105 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- 전체 선택자 -</h1>
+    <p> &plus; 모든 태그를 선택하여 한번에 바꾼다</p>
+    <pre>
+        * { 속성명 : 속성값 }
+    </pre>
+
+    <hr>
+    <h1>- HTML태그 선택자 -</h1>
+    <p> &plus; html에서 제공하는 태그를 선택하여 설정한다</p>
+    <pre>
+        p { 속성명 : 속성값 }
+        &lt;p&gt; 여기에 적용된다 &lt;/p&gt;
+    </pre>
+
+    <hr>
+    <h1>- id 선택자 -</h1>
+    <p> &plus; 직접 지정한 id명으로 원하는 태그에 스타일을 넣는다.</p>
+    <pre>
+        #id명 { 속성명 : 속성값 }
+        &lt;p id="id명"&gt; 여기에 적용된다 &lt;/p&gt;
+        <mark>id선택자는 한문서에 한번밖에 사용불가하며, class선택자보다 우선순위로 적용된다</mark>
+    </pre>
+
+    <hr>
+    <h1>-  class 선택자 -</h1>
+    <p> &plus; 직접 지정한 class명으로 원하는 태그에 스타일을 넣는다.</p>
+    <pre>
+        .class명 { 속성명 : 속성값 }
+        &lt;p class="class명"&gt; 여기에 적용된다 &lt;/p&gt;
+        &lt;p class="class명"&gt; 여기에도 적용된다 &lt;/p&gt;
+        &lt;p class="class명"&gt; 여기에도 적용된다 &lt;/p&gt;
+        <mark>id선택자는 한문서에 한번밖에 사용불가하며, class선택자보다 우선순위로 적용된다.class선택자는 복수적으로 사용가능.</mark>
+    </pre>
+
+    <hr>
+    <h1>-  group 선택자 -</h1>
+    <p> &plus; 여러가지 html태그, id, class 선택자를 묶어서 한번에 바꾼다.</p>
+    <pre>
+        <mark>// html태그의 경우</mark>
+        h1, h2, h3 {
+            속성명 : 속성값
+        }
+        &lt;h1&gt; h1 적용된다 &lt;/h1&gt;
+        &lt;h2&gt; h2 적용된다 &lt;/h2&gt;
+        &lt;h2&gt; h3 적용된다 &lt;/h3&gt;
+
+        <mark>// id 경우</mark>
+        #id명, #id1명, #id2명 { 
+            속성명 : 속성값 
+        }
+        &lt;p id="id명"&gt; 여기에 적용된다 &lt;/p&gt;
+        &lt;p id="id1명"&gt; 여기에 적용된다 &lt;/p&gt;
+        &lt;p id="id2명"&gt; 여기에 적용된다 &lt;/p&gt;
+
+        <mark>// class의 경우</mark>
+        .class명, .class1명, .class2명 { 
+            속성명 : 속성값 
+        }
+        &lt;p class="class명"&gt; 여기에 적용된다 &lt;/p&gt;
+        &lt;p class="class1명"&gt; 여기에도 적용된다 &lt;/p&gt;
+        &lt;p class="class2명"&gt; 여기에도 적용된다 &lt;/p&gt;
+        
+    </pre>
+    
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

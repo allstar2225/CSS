@@ -1,0 +1,167 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 기본설정 */
+        img.dog {
+            float: left;
+            margin-right: 20px;
+        }
+
+        /* clear */
+        .box {
+            border: 1px ridge #fbfbfb;
+            background-color: tomato;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loc1 {
+            float: left;
+        }
+
+        .loc2 {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* overflow */
+        .over_box {
+            border: 4px inset black;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px
+        }
+
+        .dog_img {
+            float: left;
+            width: 400px;
+            height: 400px;
+        }
+
+        .dog_img_over {
+            overflow: auto;
+        }
+
+        /* layout */
+        div.layout {
+            border: 5px solid #f67576;
+            overflow: auto;
+        }
+
+        header.top {
+            text-align: center;
+            border: 5px solid #f12311;
+        }
+        nav.left {
+            text-align: center;
+            border: 5px solid #ff7783;
+            float: left;
+            padding: 10px;
+        }
+        section.center {
+            text-align: center;
+            border: 5px solid #fff992;
+            width: 1200px;
+            height: 500px;
+            float: left;
+        }
+        footer.bottom {
+            text-align: center;
+            border: 5px solid #88453e;
+            clear: both;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- 기본적인 float -</h1>
+    <p> &plus; layout을 좀더 수월하게 만들기 위해 사용</p>
+    <p><img src="../img/welsh.jpeg" alt="dog" width="245" height="180">
+        Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Nam ornare sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris maximus rhoncus vel in
+        metus. Nam pharetra arcu sit amet dolor interdum, eget scelerisque libero finibus. Phasellus quis vulputate
+        ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam id porttitor nisl, et suscipit nunc.
+        Vestibulum sit amet volutpat quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Duis placerat sem eu facilisis ultricies. Nulla et elit placerat, malesuada massa sit amet,
+        dictum quam. Duis eu turpis non sapien molestie luctus nec a tortor. Nunc non est eget elit suscipit interdum.
+        Maecenas iaculis lobortis lorem et dignissim. Nullam dapibus, arcu vel malesuada egestas, nisi mi accumsan
+        tellus, at rhoncus dolor nisi in tortor. Donec at aliquam lectus, ac egestas odio. Proin convallis sapien id
+        consectetur egestas. Sed at varius libero, ut ultricies eros. Suspendisse potenti. Vivamus non posuere mauris.
+        Maecenas luctus elementum justo, non tempor nisl blandit id. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit.</p>
+
+    <hr>
+    <h1>- clear -</h1>
+    <p> &plus; 여러 float속성들 속에서 구애받지않고 원하는 위치에 두고 싶을때 사용</p>
+    <div class="box loc1">float left</div>
+    <div class="box loc2">float right</div>
+    <p class="clear"> clear both 설정</p>
+
+    <hr>
+    <h1>- overflow -</h1>
+    <p> &plus; 담아야하는 block보다 내부태그 size가 더 클때 늘려줄수 있는 태그</p>
+    <div class="over_box">
+        이미지가 block보다 크다.
+        <img class="dog_img" src="../img/welsh.jpeg" alt="dog">
+    </div>
+    <p style="clear: left;">그렇다면 아래와 같이 overflow (auto)로 맞춰준다</p>
+    <div class="over_box dog_img_over">
+        자동으로 block의 크기가 Img의 크기에 맞춰진다
+        <img class="dog_img" src="../img/welsh.jpeg" alt="dog">
+    </div>
+
+    <hr>
+    <h1>- layout -</h1>
+    <p> &plus; float을 이용하여 layout을 짜볼수 있다.</p>
+    <div class="layout">
+        <header class="top">
+            <h2>HEADER 영역</h2>
+        </header>
+        <nav class="left">
+            <h2>NAV 영역</h2>
+        </nav>
+        <section class="center">
+            <h2> SECTION 영역 </h2>
+        </section>
+        <footer class="bottom">
+            <h2> FOOTER 영역</h2>
+        </footer>
+    </div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
