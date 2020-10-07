@@ -1,0 +1,71 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* checked */
+        .span-margin {
+            margin-left: 5px;
+        }
+
+        /* enabled, disabled */
+
+        .in1, input:checked+span {
+            color: #cd853c;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- 상태 의사 클래스 ( :checked ) -</h1>
+    <p> &plus; 체크된 상태의 input 요소를 선택</p>
+    <form action="#">
+        <input class="in1" type="checkbox" name="web" value="safari" checked="checked"><span class="span-margin">safari</span><br>
+        <input class="in1" type="checkbox" name="web" value="explorer"><span class="span-margin">explorer</span><br>
+        <input class="in1" type="checkbox" name="web" value="chrome"><span class="span-margin">chrome</span><br>
+        <input class="in1" type="checkbox" name="web" value="firefox"><span class="span-margin">firefox</span>
+    </form>
+
+    <h1>- 상태 의사 클래스 ( :enabled, :disabled ) -</h1>
+    <p> &plus; 사용 가능함을 표시하는 enabled(기본상태) 와 사용 불가를 표시하는 disabled</p>
+    <form action="#">
+        <input class="in1" type="checkbox" name="web" value="safari" checked="checked"><span class="span-margin">safari</span><br>
+        <input class="in1" type="checkbox" name="web" value="explorer"><span class="span-margin">explorer</span><br>
+        <input class="in1" type="checkbox" name="web" value="chrome"><span class="span-margin">chrome</span><br>
+        <input class="in1" type="checkbox" name="web" value="firefox" disabled="disabled"><span class="span-margin">firefox</span>
+    </form>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

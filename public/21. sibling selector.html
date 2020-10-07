@@ -1,0 +1,81 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* border */
+        div {
+            border: 3px solid black;
+        }
+
+        /* 일반 동위 선택자 */
+        .div1~p {
+            background-color: #FFE4E1;
+        }
+
+        /* 인접 동위 선택자 */
+        .div2 + p {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- general sibling selector( 일반 동위(인접) 선택자 ) -</h1>
+    <p> &plus; 해당 요소 뒤에 있는 인접한 태그에 설정값이 적용된다.</p>
+    <div class="div1">
+        <p>div 내부에 있는 p태그에는 적용이 안된다</p>
+        <p>div 내부에 있는 p태그에는 적용이 안된다</p>
+        <p>div 내부에 있는 p태그에는 적용이 안된다</p>
+    </div>
+    <p>div 외부에 있는 p태그에는 적용 된다</p>
+    <p>div 외부에 있는 p태그에는 적용 된다</p>
+
+    <hr>
+    <h1>- adjacent sibling selector( 인접 동위(인접) 선택자 ) -</h1>
+    <p> &plus; 해당 요소 바로 뒤에 있는 인접한 태그에 설정값이 적용된다.</p>
+    <div class="div2">
+        <p>sibling p 태그</p>
+        <div class="div2">
+            <p>child p 태그</p>
+        </div>
+        <p>div 바로 뒤 sibling p 태그</p>
+        <p>sibling p 태그</p>
+    </div>
+    <p>div 바로 뒤 sibling p 태그</p>
+    <p>sibling p 외부 태그</p>
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
