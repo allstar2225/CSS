@@ -1,0 +1,288 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        .first {
+            border: 3px solid black;
+        }
+
+        .second {
+            border: 3px dotted blue;
+        }
+
+        .third {
+            border: 3px dotted #e63636;
+        }
+
+        .fourth {
+            border: 3px dotted rgb(67, 167, 128);
+        }
+
+        /* first-child */
+        .f-child p:first-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* last-child */
+        .l-child p:last-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* nth-child(n) */
+        .n-child p:nth-child(2n) {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* nth-last-child(n) */
+        .n-l-child p:nth-last-child(3n) {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* first-of-type */
+        .f-o-type p:first-of-type {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* last-of-type */
+        .l-o-type p:last-of-type {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* nth-of-type */
+        .n-o-type p:nth-of-type(2n) {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* nth-last-of-type */
+        .n-l-o-type p:nth-last-of-type(2n+1) {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* only-child */
+        .only-child p:only-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* only-child */
+        .o-o-type p:only-of-type {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* empty */
+        .emp p:empty {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            margin-left: 5px;
+        }
+
+        /* empty */
+        :root {
+            background-color: #93ec8b;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- first-child -</h1>
+    <p> &plus; child태그의 가장 맨앞부분의 태그에 설정 적용</p>
+    <div class="first f-child">
+        <p>div 태그의 첫번째 p</p>
+        <p>div 태그의 두번쨰 p</p>
+        <div class="second">
+            <p>div 내부의 첫번째 p</p>
+            <p>div 내부의 두번째 p</p>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- last-child -</h1>
+    <p> &plus; child태그의 가장 뒷부분의 태그에 설정 적용</p>
+    <div class="first l-child">
+        <div class="second">
+            <p>내부 div 첫번째 태그</p>
+            <p>내부 div 두번째 태그</p>
+        </div>
+        <p>외부 div 첫번쨰 태그</p>
+        <p>외부 div 첫번째 태그</p>
+    </div>
+
+    <hr>
+    <h1>- nth-child(n) -</h1>
+    <p> &plus; 해당 태그의 n번 지정된만큼 건너띄며 적용</p>
+    <div class="first n-child">
+        <p> 미적용 </p>
+        <p> 적용 </p>
+        <p> 미적용 </p>
+        <p> 적용 </p>
+        <p> 미적용 </p>
+        <p> 적용 </p>
+    </div>
+
+    <hr>
+    <h1>- nth-last-child(n) -</h1>
+    <p> &plus; 해당 태그의 제일 마지막 부터 n번 지정된만큼 건너띄며 적용</p>
+    <div class="first n-l-child">
+        <p> 적용 </p>
+        <p> 미적용 </p>
+        <p> 미적용 </p>
+        <p> 적용 </p>
+        <p> 미적용 </p>
+        <p> 미적용 </p>
+    </div>
+
+    <hr>
+    <h1>- first-of-type -</h1>
+    <p> &plus; 모든 자식 태그의 맨 앞에 오는 특정 태그를 선택하여 설정</p>
+    <div class="first f-o-type">
+        <p>외부 div p태그</p>
+        <p>외부 div p태그</p>
+        <p>외부 div p태그</p>
+        <div class="second">
+            <p>내부 div p태그</p>
+            <p>내부 div p태그</p>
+            <p>내부 div p태그</p>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- last-of-type -</h1>
+    <p> &plus; 모든 자식 태그의 맨 뒤에 오는 특정 태그를 선택하여 설정</p>
+    <div class="first l-o-type">
+        <div class="second">
+            <p>내부 div p태그</p>
+            <p>내부 div p태그</p>
+            <p>내부 div p태그</p>
+        </div>
+        <p>외부 div p태그</p>
+        <p>외부 div p태그</p>
+        <p>외부 div p태그</p>
+    </div>
+
+    <hr>
+    <h1>- nth-of-type(n) -</h1>
+    <p> &plus; 모든 자식 태그에서 n번만큼 띄며 설정 적용</p>
+    <div class="first n-o-type">
+        <p>첫번째 p태그 (미적용)</p>
+        <div class="second"> 첫번째 div (미적용)</div>
+        <p>두번째 p태그 (적용)</p>
+        <div class="third"> 두번째 div (미적용)</div>
+        <p>세번째 p태그 (미적용)</p>
+        <div class="fourth"> 세번째 div (미적용)</div>
+        <p>네번째 p태그 (적용)</p>
+    </div>
+
+    <hr>
+    <h1>- nth-last-of-type(n) -</h1>
+    <p> &plus; 모든 자식 태그에서 맨 뒤부터 n번만큼 띄며 설정 적용</p>
+    <div class="first n-l-o-type">
+        <div class="first"> 맨뒤 네번째 div(미적용) </div>
+        <p>맨뒤 네번째 p태그 (미적용)</p>
+        <div class="second"> 맨뒤 세번째 div (미적용)</div>
+        <p>맨뒤 세번째 p태그 (적용)</p>
+        <div class="third"> 맨뒤 두번째 div (미적용)</div>
+        <p>맨뒤 두번째 p태그 (미적용)</p>
+        <div class="fourth"> 맨두 첫번째 div (미적용)</div>
+        <p>맨뒤 첫번째 p태그 (적용)</p>
+    </div>
+
+    <hr>
+    <h1>- only-child -</h1>
+    <p> &plus; 자식태그 내 자손태그가 단 하나뿐인 자식태그에 적용</p>
+    <div class="first only-child">
+        <div class="second">
+            <p>div태그 내에 유일한 p 태그</p>
+        </div>
+        <div class="third">
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+        </div>
+        <div class="fourth">
+            <p>div 태그 내에 유일한 p 태그</p>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- only-of-type -</h1>
+    <p> &plus; 자식태그 내 자손태그가 단 하나뿐인 자식태그의 특정 지정된 태그에만 적용</p>
+    <div class="first o-o-type">
+        <div class="second">
+            <p>div태그 내에 유일한 p 태그</p>
+        </div>
+        <div class="third">
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+        </div>
+        <div class="fourth">
+            <p>div 태그 내에 유일한 p 태그</p>
+        </div>
+        <div style="border: 3px dotted #d6208a;">
+            <span>div 내의 유일한 span 태그</span>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- empty -</h1>
+    <p> &plus; 아무런 내용도 적혀있지 않는 부분에 적용</p>
+    <div class="first emp">
+        <p></p>
+        <div class="third">
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+            <p> 여러가지 p태그 </p>
+        </div>
+        <p></p>
+    </div>
+
+    <hr>
+    <h1>- root -</h1>
+    <p> &plus; 문서의 root를 따른다</p>
+    <div class="first root">
+        <h1>현재 배경색이 root를 통한 적용된 모습</h1>
+    </div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
