@@ -1,0 +1,87 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- @import -</h1>
+    <p> &plus; link와 비슷한 형태로 사용된다</p>
+    <pre>
+        &lt;head&gt;
+            // link 형식
+            &lt;link rel="stylesheet" href="css파일 경로"&gt;
+            // @import 형식
+            @import url('css파일 경로')
+        &lt;/head&gt;
+
+            동시에 여러가지 css파일을 한페이지 불러들이면 과부하가 일어날수 있다.
+            그렇기 때문에 하나의 css파일을 여러가지로 묶어서 최종 페이지에는 하나의 css파일만 불러들이는것이
+            속도면에서 좋다.
+
+            ex)
+            <mark>index.html</mark>
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="first.css"&gt;
+                &lt;link rel="stylesheet" href="second.css"&gt;
+                &lt;link rel="stylesheet" href="third.css"&gt;
+            &lt;/head&gt;
+
+            <mark>first.css</mark>
+            @import url=("fourth.css");
+            @import "fiveth.css"
+
+            위처럼 link에 3가지의 스타일시트를 index.html에 불러오고, 불러온 first.css에서 fourth.css와 fiveth.css를 포함시켜서
+            원하는 위치에 스타일이 적용될때만 사용하도록 한다. 
+
+            ex2)
+            <mark>index.html</mark>
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="first.css"&gt;
+                &lt;link rel="stylesheet" href="second.css"&gt;
+                &lt;link rel="stylesheet" href="third.css"&gt;
+            &lt;/head&gt;
+
+            <mark>first.css</mark>
+            @import url=("fourth.css") print;
+            @import "fiveth.css" screen and (orientation:landscape);
+
+            위의 경우 fourth.css는 출력할때 불러오고, fiveth.css는 화면이 가로로 놓여질때만 불러오도록 설정한다.
+
+    </pre>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

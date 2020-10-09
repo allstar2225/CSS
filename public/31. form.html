@@ -1,0 +1,184 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        .form {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        /* box-sizing */
+        [name="test"] {
+            width: 20%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        /* box-radius */
+        input[name="radius"] {
+            border: 2px solid #315a6d;
+            border-radius: 10px;
+        }
+
+        input[name="bottom-radius"] {
+            border: none;
+            border-bottom: 2px solid #315a6d;
+            ;
+        }
+
+        /* background-color */
+        input[name="color"] {
+            background-color: teal;
+            color: white;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        /* focus */
+        input[name="focus"] {
+            border: 3px solid black;
+            border-radius: 3px;
+        }
+
+        input[name="focus"]:focus {
+            background-color: blanchedalmond;
+            border: 3px solid #c73333;
+            border-radius: 3px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        /* background-image */
+        input[name="image"] {
+            border: 3px solid black;
+            border-radius: 3px;
+            background-image: url(../img/welsh.jpeg);
+            background-position: left;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            width: 50%;
+            background-size: 100px;
+        }
+
+        /* textarea */
+        textarea[name="reple"] {
+            width: 40%;
+            height: 200px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 3px solid blanchedalmond;
+            border-radius: 3px;
+            resize: both;
+        }
+        textarea[name="reple"]:focus {
+            border: 3px solid #8a5454;
+            border-radius: 3px;
+            -webkit-transition: 1s;
+            transition: 1s;
+        }
+
+        /* select */
+        select[name="select"] {
+            border: 2px solid black;
+            border-radius: 3px;
+            background-color: blanchedalmond;
+            box-sizing: content-box;
+            width: 10%;   
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- box-sizing -</h1>
+    <p> &plus; input요소의 box 사이즈를 설정한다</p>
+    <form action="#">
+        <input type="text" name="test" placeholder="box-sizing으로 사이즈 조절">
+    </form>
+
+    <hr>
+    <h1>- box-radius -</h1>
+    <p> &plus; input요소의 테두리를 설정한다</p>
+    <form class="form" action="#">
+        <input type="text" name="radius" placeholder="테두리를 둥글게 해준다">
+        <br><br>
+        <input type="password" name="bottom-radius" placeholder="하단에만 나오도록 설정">
+    </form>
+
+    <hr>
+    <h1>- background-color -</h1>
+    <p> &plus; input요소의 배경색을 설정</p>
+    <form class="form" action="#">
+        <input type="text" name="color">
+    </form>
+
+    <hr>
+    <h1>- focus -</h1>
+    <p> &plus; input요소의 클릭시 요소내에 스타일이 적용된다</p>
+    <form class="form" action="#">
+        <input type="text" name="focus" placeholder="클릭시 효과 적용">
+    </form>
+
+    <hr>
+    <h1>- background-image -</h1>
+    <p> &plus; input요소에 이미지를 넣는다</p>
+    <form class="form" action="#">
+        <input type="text" name="image" placeholder="input에 이미지 적용">
+    </form>
+
+    <hr>
+    <h1>- textarea -</h1>
+    <p> &plus; 댓글이나 간만한 메모장 같은 구역을 설정한다</p>
+    <form action="#">
+        <textarea name="reple">resize : both로 전체 사이즈 조절가능</textarea>
+    </form>
+
+    <hr>
+    <h1>- select -</h1>
+    <p> &plus; 선택창에 여러 스타일을 적용 시킨다</p>
+    <form action="#">
+        <select name="select">
+            <option value="choice" selected>- 선택하세요 -</option>
+            <option value="benz"> 벤츠 </option>
+            <option value="bmw"> bmw </option>
+            <option value="volkswagen"> 폭스바겐 </option>
+            <option value="mini"> 미니 </option>
+        </select>
+    </form>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

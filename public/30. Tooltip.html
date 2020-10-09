@@ -26,6 +26,130 @@
 
         .class {}
 
+        /* 기본 툴팁 */
+        .tooltip {
+            /* 현재 화면에 보일 문구의 스타일 */
+            position: relative;
+            display: inline-block;
+            margin: 30px 0px 30px 500px;
+        }
+
+        .tooltip .tool-content {
+            /* .tooltip내부의 내용의 스타일 */
+            background-color: burlywood;
+            font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            margin-top: 10px;
+            visibility: hidden;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+        }
+
+        .tooltip:hover .tool-content {
+            /* .tooltip에 마우스를 올렸을때 보이게 한다 */
+            visibility: visible;
+        }
+
+        /* 글귀가 왼쪽으로 나오게 하는법 */
+        .tooltip-left {
+            /* 현재 화면에 보일 문구의 스타일 */
+            position: relative;
+            display: inline-block;
+            margin: 30px 0px 30px 500px;
+        }
+
+        .tooltip-left .tool-left-content {
+            /* .tooltip내부의 내용의 스타일 */
+            background-color: burlywood;
+            font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            margin-top: 10px;
+            visibility: hidden;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+            /* 추가 */
+            top: -15px;
+            right: 105%;
+        }
+
+        .tooltip-left:hover .tool-left-content {
+            visibility: visible;
+        }
+
+        /* 글귀가 윗쪽으로 나오게 하는법 */
+        .tooltip-top {
+            /* 현재 화면에 보일 문구의 스타일 */
+            position: relative;
+            display: inline-block;
+            margin: 30px 0px 30px 500px;
+        }
+
+        .tooltip-top .tool-top-content {
+            /* .tooltip내부의 내용의 스타일 */
+            background-color: burlywood;
+            font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            margin-top: 10px;
+            visibility: hidden;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+            /* 추가 */
+            bottom: 100%;
+            left: 50%;
+            margin-left: -100%;
+            margin-bottom: 10px;
+        }
+
+        .tooltip-top:hover .tool-top-content {
+            visibility: visible;
+        }
+
+        /* 글귀가 말풍선으로 나오게 하는법 */
+        .tooltip-main {
+            /* 현재 화면에 보일 문구의 스타일 */
+            position: relative;
+            display: inline-block;
+            margin: 30px 0px 30px 500px;
+        }
+
+        .tooltip-main .tool-main-content {
+            /* .tooltip내부의 내용의 스타일 */
+            background-color: burlywood;
+            font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            margin-top: 10px;
+            visibility: hidden;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+            /* 추가 */
+            bottom: 180%;
+            left: 50%;
+            margin-left: -100%;
+            
+        }
+        .tooltip-main .tool-main-content::after {
+            /* 말풍선 스타일 */
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: burlywood transparent transparent transparent;
+
+        }
+        .tooltip-main:hover .tool-main-content {
+            visibility: visible;
+        }
     </style>
 
     <title> CSS tag 모음</title>
@@ -34,11 +158,33 @@
 
 <body>
 
-    <h1>- 내용 -</h1>
-    <p> &plus; 내용</p>
+    <h1>- tooltip -</h1>
+    <p> &plus; 해당 content에 마우스를 올리면 내용을 보여준다</p>
+    <div class="tooltip">
+        <span>마우스를 올려보세요.</span>
+        <div class="tool-content">
+            <span>이 내용이 보일것입니다.</span>
+        </div>
+    </div>
 
+    <h1>- 왼쪽에서 나오게 하기 -</h1>
+    <p> &plus; 해당 content에 마우스를 올리면 왼쪽편에 내용을 보여준다</p>
+    <div class="tooltip-left">
+        <span>마우스를 올려보세요.</span>
+        <div class="tool-left-content">
+            <span>이 내용이 보일것입니다.</span>
+        </div>
+    </div>
 
-    
+    <h1>- 말풍선 효과 내기 -</h1>
+    <p> &plus; 해당 content에 마우스를 올리면 말풍선처럼 나온다</p>
+    <div class="tooltip-main">
+        <span>마우스를 올려보세요.</span>
+        <div class="tool-main-content">
+            <span>이 내용이 보일것입니다.</span>
+        </div>
+    </div>
+
     <hr style="clear: both;">
     <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
 </body>
