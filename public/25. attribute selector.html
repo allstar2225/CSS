@@ -1,0 +1,167 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 속성 이름 선택자 */
+        [come] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 = 속성 값 선택자 */
+        [come1="first come"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 ~= 속성 값 선택자 */
+        [come2~="first"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 |= 속성 값 선택자*/
+        [come3|="first"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 ^= 속성 값 선택자*/
+        [come4^="first"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 $= 속성 값 선택자*/
+        [come5$="first"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 속성 이름 *= 속성 값 선택자*/
+        [come6*="first"] {
+            background-color: black;
+            color: burlywood;
+        }
+
+        /* 활용 */
+        [type="text"] {
+            background-color: brown;
+            color: burlywood;
+        }
+        [name="pass"] {
+            background-color: #b9d639;
+            color: #32739e;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- 속성 이름 선택자 -</h1>
+    <p> <mark>&plus; 특정 속성을 가진 태그 모두 선택</mark></p>
+    <h2> [come]으로 속성명 설정</h2>
+    <p come="아무런글"> come="아무런말" </p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성 이름 = 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정과 같은 문자열이 들어간 태그에 적용</mark></p>
+    <h2> 속성값 = first come</h2>
+    <p come1="first come"> 속성이름 = first come </p>
+    <p come1="first">속성이름= first</p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성이름 ~= 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정된 특정문자열이 들어간 태그에 적용(띄어쓰기를 기준으로 단어를 인식)</mark></p>
+    <h2> 속성값 = first </h2>
+    <p come2="first 아무말"> 속성이름 ~= first 아무말 </p>
+    <p come2="first-아무말"> 속성이름 ~= first-아무말 </p>
+    <p come2="없음">속성이름만 있음</p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성이름 |= 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정된 특정문자열이 들어간 태그에 적용(하이픈(-)을 기준으로 단어 인식</mark></p>
+    <h2> 속성값 = first </h2>
+    <p come3="first 아무말"> 속성이름 |= first 아무말 </p>
+    <p come3="first-아무말"> 속성이름 |= first-아무말 </p>
+    <p come3="없음">속성이름만 있음</p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성이름 ^= 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정된 문자열로 시작하면 무조건 적용.</mark></p>
+    <h2> 속성값 = first </h2>
+    <p come4="first 아무말"> 속성이름 ^= first 아무말 </p>
+    <p come4="first-아무말"> 속성이름 ^= first-아무말 </p>
+    <p come4="p first">속성이름 ^= p first </p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성이름 $= 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정된 문자열로 끝나는 태그에 적용 </mark></p>
+    <h2> 속성값 = first </h2>
+    <p come5="first 아무말"> 속성이름 $= first 아무말 </p>
+    <p come5="first-아무말"> 속성이름 $= first-아무말 </p>
+    <p come5="아무말 first"> 속성이름 $= 아무말 first </p>
+    <p come5="아무말-first"> 속성이름 $= 아무말-first </p>
+    <p come5="p first">속성이름 $= p first</p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 속성이름 *= 속성값 선택자 -</h1>
+    <p> <mark>&plus; 속성값에 설정된 문자열이 들어가기만 한다면 무조건 적용 </mark></p>
+    <h2> 속성값 = first </h2>
+    <p come6="first 아무말"> 속성이름 *= first 아무말 </p>
+    <p come6="first-아무말"> 속성이름 *= first-아무말 </p>
+    <p come6="아무말 first"> 속성이름 *= 아무말 first </p>
+    <p come6="아무말-first"> 속성이름 *= 아무말-first </p>
+    <p come6="p first">속성이름 *= p first</p>
+    <p>아무것도 없음</p>
+
+    <hr>
+    <h1>- 활용법 -</h1>
+    <p> <mark>&plus; 아래 처럼 사용가능 </mark></p>
+    <form action="../../html5/public/Server.html">
+        이름 : <input type="text" name="name" placeholder="이름"><br>
+        비번 : <input type="password" name="pass" placeholder="비밀번호"><br><br>
+        <input type="submit" value="전송">
+    </form>
+    
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

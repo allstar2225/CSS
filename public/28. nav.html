@@ -1,0 +1,185 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 전체 사용 */
+        .link a:hover {
+            color: chartreuse;
+        }
+
+        .link_state a:hover {
+            background-color: cadetblue;
+            color: white;
+        }
+
+        /* 수직 link + list */
+        .list ul {
+            width: 5%;
+            border: 1px solid black;
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+        }
+
+
+
+        /* box 형식의 수직 nav */
+        .box ul {
+            border: 1px solid black;
+            background-color: burlywood;
+            width: 10%;
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .box_link a {
+            display: block;
+            border-bottom: 1px dotted black;
+            padding: 8px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .font ul {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 수평 link + list */
+        .list1 ul {
+            width: 10%;
+            border: 1px solid black;
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .horizental li {
+            display: inline;
+        }
+
+        /* float 스타일 수평메뉴바 */
+        .form ul {
+            background-color: #FFDAB9;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .li_left li {
+            float: left;
+        }
+
+        .li_right li {
+            float: right
+        }
+
+        .li_last li:last-child {
+            border-right: none;
+        }
+
+        .li_style li a {
+            display: block;
+            background-color: #FFDAB9;
+            color: #000000;
+            padding: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border-right: 1px solid white;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- link+list 수직 스타일 -</h1>
+    <p> &plus; 기본적으로 링크와 리스트를 활용한 수직스타일 메뉴바</p>
+    <form class="list font">
+        <ul class="link">
+            메뉴
+            <hr>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">HTML5</a></li>
+        </ul>
+    </form>
+
+    <hr>
+    <h1>- box형식의 수직 nav -</h1>
+    <p> &plus; 스타일을 적용한 수직 box type의 navigation</p>
+    <form class="box font">
+        <ul class="box_link link_state">
+            <p>메뉴</p>
+            <hr>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">HTML5</a></li>
+        </ul>
+    </form>
+
+    <hr>
+    <h1>- link+list 수평 스타일 -</h1>
+    <p> &plus; 기본적으로 링크와 리스트를 활용한 수평스타일 메뉴바</p>
+    <form class="list1 font">
+        <ul class="link horizental">
+            메뉴
+            <hr>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">HTML5</a></li>
+        </ul>
+    </form>
+
+    <hr>
+    <h1>- float으로 수평스타일 메뉴바 -</h1>
+    <p> &plus; float으로 수평 정렬을 가진 nav바</p>
+    <form class="form font">
+        <b>메뉴</b>
+        <hr>
+        <ul class="li_left li_style link_state">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">HTML5</a></li>
+            <ul class="li_right li_bor_left li_last">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </ul>
+    </form>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

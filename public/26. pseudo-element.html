@@ -1,0 +1,155 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* ::first-letter */
+        .f-letter p::first-letter {
+            color: #794747;
+            font-size: 2rem;
+            border: 3px solid black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* ::first-letter */
+        .f-line p::first-line {
+            color: #794747;
+            font-size: 2rem;
+            border: 3px solid black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 3px;
+            text-transform: capitalize;
+        }
+
+        /* ::before */
+        .before p::before {
+            content: url(../img/welsh.jpeg);
+        }
+
+        /* ::after */
+        .after p::after {
+            content: url(../img/welsh.jpeg);
+        }
+
+        /* ::selection */
+        .sel p::selection {
+            color: #b7bd66;
+        }
+
+        /* ::mix */
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- ::first-letter -</h1>
+    <p> &plus; 텍스트의 가장 첫번째 글자를 선택하여 설정 (block 타입에만 사용가능)</p>
+    <div class="f-letter">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+    <hr>
+    <h1>- ::first-line -</h1>
+    <p> &plus; 텍스트의 가장 첫번째 라인을 선택하여 설정 (block 타입에만 사용가능)</p>
+    <div class="f-line">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+    <hr>
+    <h1>- ::before -</h1>
+    <p> &plus; 내용 부분 바로 앞에 다른 태그를 선적용 시킨다.</p>
+    <div class="before">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+    <hr>
+    <h1>- ::after -</h1>
+    <p> &plus; 내용 부분의 맨 뒤에 다른 태그를 선적용 시킨다.</p>
+    <div class="after">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+
+    <hr>
+    <h1>- ::selection -</h1>
+    <p> &plus; 특정 태그를 마우스로 드래그 해보면 원하는 설정값으로 변한다.</p>
+    <div class="sel">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+    <hr>
+    <h1>- mix -</h1>
+    <p> &plus; 전부 합해본다</p>
+    <div class="f-letter f-line sel after before">
+        <p>adipiscing elit. Praesent at tellus et neque luctus tincidunt at vitae ligula. Donec
+            a accumsan magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Sed dolor nunc, facilisis in felis efficitur, sodales maximus nunc. Integer congue lectus vitae
+            velit aliquam vehicula. Nunc mauris massa, sodales vitae augue ut, pulvinar mollis erat. Sed feugiat, mauris
+            vitae convallis iaculis, nibh magna pretium diam, a sagittis quam urna quis augue. Nam feugiat accumsan ante
+            id porttitor. Morbi tempus accumsan sem vitae venenatis. Duis mattis consequat ipsum nec interdum. Curabitur
+            placerat vulputate faucibus. Cras consectetur elit ut metus consectetur tristique.</p>
+    </div>
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

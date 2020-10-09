@@ -1,0 +1,125 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* dropdown */
+        .drop {
+            position: relative;
+            display: inline-block;
+        }
+
+        .drop-content {
+            display: none;
+            position: absolute;
+            background-color: wheat;
+            min-width: 250px;
+            margin: 2px;
+            padding: 10px;
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 2);
+        }
+
+        .drop:hover .drop-content {
+            display: block;
+        }
+
+        /* dropdown menu */
+        .drop-button {
+            background-color: #FFDAB9;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+        }
+
+        .drop-main {
+            position: relative;
+            display: inline-block;
+        }
+
+        .drop-menu-content {
+            display: none;
+            position: absolute;
+            background-color: #FFDAB9;
+            min-width: 100px;
+            padding: 5px;
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .drop-menu-content a {
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .drop-menu-content a:hover {
+            background-color: rosybrown;
+        }
+
+        .drop-main:hover .drop-menu-content {
+            display: block;
+        }
+
+        .drop-main:hover .drop-button {
+            background-color: royalblue;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- dropdown의 기본-</h1>
+    <p> &plus; 해당 태그에 마우스를 올리면 텍스트가 나타나는 효과</p>
+    <div class="drop">
+        <span>여기에 마우스를 올리세요</span>
+        <div class="drop-content">
+            <p>마우스를 올리면 이 내용이 보인다.</p>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- dropdown메뉴-</h1>
+    <p> &plus; dropdown으로 메뉴를 만든다</p>
+    <div class="drop-main">
+        <button class="drop-button">드랍버튼</button>
+        <div class="drop-menu-content">
+            <a href="#">1메뉴</a>
+            <a href="#">2메뉴</a>
+            <a href="#">3메뉴</a>
+            <a href="#">4메뉴</a>
+        </div>
+    </div>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

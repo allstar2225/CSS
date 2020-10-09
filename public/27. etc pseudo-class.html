@@ -1,0 +1,72 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* :not */
+        .ok input {
+            background-color: #FFEFD5;
+        }
+
+        .not input:not([type="password"]) {
+            background-color: #CD853F;
+        }
+
+        /* :not */
+        :lang(kr) { quotes: '"' '"' "'" "'"; }
+        :lang(jp) { quotes: "<<" ">>" "<" ">" ;}
+        
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- :not -</h1>
+    <p> &plus; not으로 설정해둔 속성값를 제외한 나머지에 not에서 설정한 값이 적용된다.</p>
+    <form action="../../html5/public/Server.html" class="ok not">
+        <input type="text" name="user" placeholder="not의 속성값이 적용됨">
+        <input type="password" name="pass" placeholder="이 부분이 :not으로 지정되어 ok 설정값 적용" size="35">
+        <input type="text" name="user" placeholder="not의 속성값이 적용됨">
+    </form>
+
+    <hr>
+    <h1>- :lang -</h1>
+    <p> &plus; 언어의 설정에 따라 다르게 표현</p>
+    <p> 한국에서 <q lang="kr"> 인용 표현 </q>을 이런식으로 한다</p>
+    <p> 일본에서는 <q lang="jp">인용 표현 </q>을 이럲식으로 한다</p>
+
+
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
