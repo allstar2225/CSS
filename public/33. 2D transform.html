@@ -1,0 +1,201 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /*  하단 첫페이지 */
+        .home {
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* 구역 설정 */
+        div {
+            width: 50%;
+            height: 400px;
+            margin: 50px 0px 0px 20px;
+        }
+
+        /* 기본 박스 */
+        div.normal {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+        }
+
+        /* translate() */
+        .box {
+            border: 3px solid black;
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            margin: 2px;
+        }
+
+        .tran-box {
+            background-color: blue;
+            color: white;
+            /* translate( x, y) */
+            -webkit-transform: translate(100px, 100px);
+            -o-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            margin: 2px;
+            opacity: 0.6;
+        }
+
+        /* rotate() */
+        .rotate-box {
+            background-color: blue;
+            color: white;
+            /* rotate (각도 deg) */
+            -webkit-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            margin: 2px;
+            opacity: 0.6;
+        }
+
+        /* scale() */
+        .sc-origin {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+            margin: 50px 0px 0px 100px;
+        }
+
+        .sc-box1 {
+            border: 2px solid red;
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            /* scale ( 너비, 높이 ) */
+            -webkit-transform: scale(2, 2);
+            -o-transform: scale(2, 2);
+            transform: scale(2, 2);
+        }
+
+        .sc-box2 {
+            border: 2px solid burlywood;
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            -webkit-transform: scale(0.5, 0.5);
+            -o-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+        }
+
+        /* skew() */
+        .skew-box {
+            background-color: blue;
+            color: white;
+            -webkit-transform: skew(20deg, 30deg);
+            -webokit-transform: skew(20deg, 30deg);
+            /* skew(x, y) */
+            transform: skew(20deg, 30deg);
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            margin: 10px;
+            opacity: 0.6;
+        }
+
+        /* matrix() */
+        .matrix-box {
+            border: 2px solid burlywood;
+            background-color: blue;
+            color: white;
+            /* matrix ( x비율, x기울기, y기울기, y비율, x위치, y위치) */
+            /* 
+            webkit : 크롬, 사파리
+            moz : 파이어폭스
+            o : 오페라
+            ms = 익스플로러 (기본)
+             */
+            -webkit-transform: matrix(0.3, 5, 5, 0.3, 1, 0);
+            -o-transform: matrix(0.3, 5, 5, 0.3, 1, 0);
+            transform: matrix(1.2, 0.5, 0.3, 1, 10, 10);
+            border-radius: 4px;
+            box-shadow: 0px 10px 20px 0 black;
+            margin: 10px;
+            opacity: 0.6;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- translate() 메소드 -</h1>
+    <p> &plus; 해당 태그를 주어진 x축과 y축 거리만큼 이동</p>
+    <div>
+        <div class="normal box">기본 box</div>
+        <div class="normal tran-box">translate() 메소드가 적용된 box</div>
+    </div>
+
+    <hr>
+    <h1>- rotate() 메소드 -</h1>
+    <p> &plus; 해당 태그를 주어진 각도만큼 시계 혹은 반시계로 돌린다</p>
+    <div>
+        <div class="normal box">기본 box</div>
+        <div class="normal rotate-box">rotate() 메소드가 적용된 box ( 30deg로 돌린것 )</div>
+    </div>
+
+    <hr>
+    <h1>- scale() 메소드 -</h1>
+    <p> &plus; 해당 태그를 주어진 값만큼 배율을 늘리거나 줄인다</p>
+    <div>
+        <div class="sc-origin box">기본 box</div>
+        <div class="sc-origin sc-box1">scale() 메소드가 적용된 box ( 너비2배, 높이2배 )</div>
+        <div class="sc-origin sc-box2">scale() 메소드가 적용된 box ( 너비0.5배, 높이0.5배 )</div>
+    </div>
+
+    <hr>
+    <h1>- skew() 메소드 -</h1>
+    <p> &plus; 해당 태그를 주어진 각도만큼 x, y축 방향으로 기울인다. skew-x 또는 skew-y로 하나의 축만 기울일수도 있다.</p>
+    <div>
+        <div class="normal box">기본 box</div>
+        <div class="normal skew-box">skew() 메소드가 적용된 box ( x:20deg, y:30deg )</div>
+    </div>
+
+    <hr>
+    <h1>- matrix() 메소드 -</h1>
+    <p> &plus; 위의 모든 메소드들을 한줄로 요약할수 있다. 순서는 matrix(scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY())</p>
+    <div>
+        <div class="normal box">기본 box</div>
+        <div class="normal matrix-box">matrix() 메소드로 적용한 박스</div>
+    </div>
+
+
+
+    <footer class="home">
+        <hr>
+        <p><a href="../index.html"> 첫페이지로</a></p>
+    </footer>
+</body>
+
+</html>

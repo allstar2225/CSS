@@ -1,0 +1,234 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* home */
+        .home {
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* 구역 설정 */
+        div {
+            width: 50%;
+            height: 150%;
+            margin: 10px 0px 0px 20px;
+            border: 1px solid black;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        /* 기본 박스 */
+        .box-size {
+            height: 150px;
+            width: 200px;
+            position: absolute;
+        }
+
+        .origin-box {
+            border: 2px solid black;
+            box-shadow: 0px 10px 20px 0 black;
+            border-radius: 4px;
+            padding: 3px;
+            text-align: center;
+            line-height: 500%;
+        }
+
+        /* rotateX() */
+        .rot-normal {
+            height: 150px;
+            width: 200px;
+        }
+
+        .rot-box {
+            background-color: blue;
+            color: white;
+            box-shadow: 0px 10px 20px 0 black;
+            opacity: 0.5;
+            padding: 3px;
+        }
+
+        .degX1 {
+            -webkit-transform: rotateX(30deg);
+            transform: rotateX(30deg);
+        }
+
+        .degX2 {
+            -webkit-transform: rotateX(40deg);
+            transform: rotateX(40deg);
+        }
+
+        .degX3 {
+            -webkit-transform: rotateX(50deg);
+            transform: rotateX(50deg);
+        }
+
+        /* rotateY() */
+        .degY1 {
+            -webkit-transform: rotateY(30deg);
+            transform: rotateY(30deg);
+        }
+
+        .degY2 {
+            -webkit-transform: rotateY(40deg);
+            transform: rotateY(40deg);
+        }
+
+        .degY3 {
+            -webkit-transform: rotateY(50deg);
+            transform: rotateY(50deg);
+        }
+
+        /* rotateZ() */
+        .degZ1 {
+            -webkit-transform: rotateZ(30deg);
+            transform: rotateZ(30deg);
+        }
+
+        .degZ2 {
+            -webkit-transform: rotateZ(40deg);
+            transform: rotateZ(40deg);
+        }
+
+        .degZ3 {
+            -webkit-transform: rotateZ(50deg);
+            transform: rotateZ(50deg);
+        }
+
+        /* translate X, Y, Z */
+        .tran-normal {
+            height: 150px;
+            width: 200px;
+            margin: 50px;
+        }
+        .tran-box {
+            background-color: blue;
+            color: white;
+            box-shadow: 0px 10px 20px 0 black;
+            opacity: 0.5;
+            padding: 3px;
+            position: absolute;
+        }
+        .tran3d {
+            -webkit-transform: perspective(1000px) translate3d(-100px, 50px, -100px);
+            transform: perspective(1000px) translate3d(-100px, -50px, 100px);
+        }
+
+        /* scale X, Y, Z */
+        .sca-normal {
+            height: 200px;
+            width: 300px;
+            margin: 200px 0px 200px 200px;
+        }
+        .sca-origin {
+            border: 3px solid black;
+            box-shadow: 0px 10px 20px 0 black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            position:absolute;
+            z-index: 99;
+            
+        }
+        .sca-box1 {
+            border: 3px solid red;
+            box-shadow: 0px 10px 20px 0 black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            -webkit-transform: scale3d(2,2,2);
+            transform: scale3d(2,2,2);
+            position: absolute;
+            z-index: -1;
+        }
+        .sca-box2 {
+            border: 3px solid bisque;
+            box-shadow: 0px 10px 20px 0 black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+            z-index: 1;
+        }
+        
+        
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- rotateX, Y, Z() -</h1>
+    <p> &plus; X축,Y축, Z 방향으로 해당요소를 기울인다</p>
+    <div>
+        <!-- X -->
+        <div class="rot-normal origin-box">X축 기본 박스</div>
+        <div class="rot-normal rot-box degX1">30deg</div>
+        <div class="rot-normal rot-box degX2">40deg</div>
+        <div class="rot-normal rot-box degX3">50deg</div>
+        <br><br><br>
+        <!-- Y -->
+        <div class="rot-normal origin-box">Y축 기본 박스</div>
+        <div class="rot-normal rot-box degY1">30deg</div>
+        <div class="rot-normal rot-box degY2">40deg</div>
+        <div class="rot-normal rot-box degY3">50deg</div>
+        <br><br><br>
+        <!-- Z -->
+        <div class="rot-normal origin-box">Z축 기본 박스</div>
+        <div class="rot-normal rot-box degZ1">30deg</div>
+        <div class="rot-normal rot-box degZ2">40deg</div>
+        <div class="rot-normal rot-box degZ3">50deg</div>
+    </div>
+
+    <hr>
+    <h1>- translateX, Y, Z() -</h1>
+    <p> &plus; X, Y, Z축 방향으로 해당요소를 이동시킨다다</p>
+    <div>
+        <div class="tran-normal origin-box">기본 박스</div>
+        <div class="tran-normal tran-box tran3d">translate3d() 로 x축 -100px y축 -50px z축 100px 설정</div>
+    </div>
+
+    <hr>
+    <h1>- scaleX, Y, Z() -</h1>
+    <p> &plus; X, Y, Z축 방향으로 해당 요소의 비율을 늘리고 줄인다</p>
+    <div>
+        <div class="sca-normal sca-origin">original</div>
+        <div class="sca-normal sca-box1">scale3d() 로 x,y,z 2배로 늘림</div>
+        <div class="sca-normal sca-box2">scale3d() 로 x,y,z 0.5배로 축소 </div>
+    </div>
+
+    
+
+
+    <footer class="home">
+        <hr>
+        <p><a href="../index.html"> 첫페이지로</a></p>
+    </footer>
+
+</body>
+
+</html>

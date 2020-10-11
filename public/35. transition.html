@@ -1,0 +1,222 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 구역설정 */
+        div {
+            height: 50%;
+            width: 50%;
+        }
+
+        /* transition */
+        .tran {
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+            margin: 3px;
+            opacity: 0.6;
+            border-radius: 2px;
+            -webkit-transition: width 1s, height 2s;
+            ;
+            transition: width 1s, height 2s;
+        }
+
+        .tran:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* transition-timing-function */
+        .tran-box {
+            width: 150px;
+            height: 50px;
+            background-color: orange;
+            margin: 3px;
+            opacity: 0.6;
+            border-radius: 2px;
+            -webkit-transition: width 1s, height 2s;
+            transition: width 1s, height 2s;
+            text-align: center;
+        }
+
+        .linear {
+            /* 화면 전환 속도가 일정하게 진행된다 */
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+
+        .ease {
+            /* 기본값속도로 천천히 시작되었다가 중간에 빨라지고, 마지막에 다시 느려진다 */
+            -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+        }
+
+        .ease-in {
+            /* 천천히 시작 */
+            -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out {
+            /* 마지막에 천천히 끝난다 */
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out {
+            /* 천천히 시작되고, 천천히 끝난다 */
+            -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+        .cubic-bezier {
+            /* 사용자가 정의한 함수에 따라 진행 */
+            -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .tran-box:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* transition-delay */
+        .tran-d-box {
+            width: 150px;
+            height: 50px;
+            background-color: orange;
+            margin: 3px;
+            opacity: 0.6;
+            border-radius: 2px;
+            text-align: center;
+            -webkit-transition: width 1s, height 2s;
+            transition: width 1s, height 2s;
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+
+        .tran-d-box:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* transition-duration */
+        .tran-du-box {
+            width: 150px;
+            height: 50px;
+            background-color: orange;
+            margin: 3px;
+            opacity: 0.6;
+            border-radius: 2px;
+            text-align: center;
+            -webkit-transition: width 1s, height 2s;
+            transition: width 1s, height 2s;
+            -webkit-transition-duration: 5s;
+            transition-duration: 5s;
+
+        }
+
+        .tran-du-box:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* transition 과 transform쓰기 */
+        .mix-box {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            margin: 3px;
+            opacity: 0.6;
+            border-radius: 2px;
+            text-align: center;
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        .mix-box:hover {
+            width: 300px;
+            height: 300px;
+            -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- transition -</h1>
+    <p> &plus; 해당요소가 부드럽게 전환될수 있도록 스타일을 꾸며줌</p>
+    <div>
+        <div class="tran"></div>
+        <div class="tran"></div>
+        <div class="tran"></div>
+    </div>
+
+    <hr>
+    <h1>- transition-timing-function -</h1>
+    <p> &plus; 속성이 전환 되는 효과의 시간당 속도를 설정</p>
+    <div>
+        <div class="tran-box linear">linear</div>
+        <div class="tran-box ease">ease</div>
+        <div class="tran-box ease-in">ease-in</div>
+        <div class="tran-box ease-out">ease-out</div>
+        <div class="tran-box ease-in-out">ease-in-out</div>
+        <div class="tran-box cubic-bezier">cubic-bezier</div>
+    </div>
+
+    <hr>
+    <h1>- transition-delay-</h1>
+    <p> &plus; 속성의 효과가 나타나기까지 지연 시킨다</p>
+    <div>
+        <div class="tran-d-box">1초뒤에 효과발생</div>
+    </div>
+
+    <hr>
+    <h1>- transition-duration-</h1>
+    <p> &plus; 속성의 효과의 지속될 시간을 설정</p>
+    <div>
+        <div class="tran-du-box">5초 지속</div>
+    </div>
+
+
+    <hr>
+    <h1>- transition과 transform 동시에 사용-</h1>
+    <p> &plus; 전환 과 form의 변화를 동시에 사용한다</p>
+    <div>
+        <div class="mix-box"></div>
+    </div>
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

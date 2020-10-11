@@ -75,10 +75,104 @@
             @import "fiveth.css" screen and (orientation:landscape);
 
             위의 경우 fourth.css는 출력할때 불러오고, fiveth.css는 화면이 가로로 놓여질때만 불러오도록 설정한다.
-
     </pre>
 
+    <hr>
+    <h1>- @font-face -</h1>
+    <p> &plus; web폰트를 정의할때 사용하는 규칙</p>
+    <pre>
+        // <mark>@font-face 설정</mark>
+        &lt;style&gt;
+            @font-face {
+                font-family: '원하는폰트명1';
+                src: url(폰트파일경로), url(폰트파일경로), url(폰트파일경로);
+                font-style: 원하는 스타일;
+                font-weight: 원하는 두께;
+            }
+        &lt;/style&gt;
 
+        &lt;style&gt;
+            @font-face {
+                font-family: '원하는폰트명2';
+                src: url(폰트파일경로), url(폰트파일경로), url(폰트파일경로);
+                font-style: 원하는 스타일;
+                font-weight: 원하는 두께;
+            }
+        &lt;/style&gt;
+        
+        // <mark>html 태그에 적용</mark>
+        p {
+            font-family : 원하는폰트명1;
+            font-weight : 원하는 두께;
+        }
+
+        h1 {
+            font-family : 원하는폰트명2;
+            font-weight : 원하는 두께;
+        }
+
+        위처럼 @font-face에 원하는 폰트를 적용 시키고, html에서 font-family로 불러와 사용할수 있게 한다. 
+    </pre>
+
+    <hr>
+    <h1>- @media (미디어쿼리) -</h1>
+    <p> &plus; 사용 하는 기기에 맞게 스타일은 맞추거나, html문서에 각각 동적인 표현이 가능하게 해준다</p>
+    <pre>
+        // <mark>기본적인 설정</mark>
+
+    --> 첫번째 방법 (스타일 시트에 미디어 연결)
+        &lt;style&gt;
+            @media 매체유형(media type) and 또는 only 또는 not (표현식(media query value)) { 속성명 : 속성값 }
+        &lt;/style&gt;
+
+    --> 두번째 방법 (head 태그에 css파일로 연결)
+        &lt;head&gt;
+            &lt;link rel="stylesheet" media="매체유형 and 또는 only 또는 not (표현식) href="css파일 경로" /&gt;
+        &lt;/head&gt;
+
+        // <mark> 매체유형 </mark>
+        all : 모든 매체에서 사용
+        print : 프린터 기기에 사용
+        screen : 컴퓨터 혹은 태블릿, 스마트폰 등의 화면이 있는 매체에 사용 (자주 사용할것)
+        speech : 웹 페이지를 읽어주는 스크린 리더에 사용
+
+        // <mark> 표현식(media query) </mark>
+        width : 화면의 너비
+        height : 화면의 높이
+        device-width : 매체의 화면 너비
+        device-height : 매채의 화면 높이
+        device-aspect-ratio : 매채 화면의 비율
+        orientation : 매체의 화면 방향
+        color : 매체의 색상 비트수
+        color-index : 매체의 표현 가능한 비트수
+        monochrome : 흑백 매체의 픽셀당 비트수
+        resolution : 매체의 해상도
+        <strong>(orientation 을 제외한 나머지는 min 혹은 max를 사용하여 반응형으로 만들수 있다)</strong>
+    
+
+        // <mark>예제 1 (min-width로 픽셀별 다른 설정값 적용)</mark>
+        body { background-color : darkorange }
+        @media screen and (min-width : 480px) {
+            body { background-color : lightblue }
+        }
+    --> 위의 경우 480px 이하의 웹페이지의 배경색을 darkorange로, 480px 이상은 lightblue로 표현하게 되어있다.
+
+        // <mark>예제 2 (출력화면과 프린트를 다르게 맞추는법)</mark>
+        @media screen {
+            body { 
+                background-color : orange;
+                color : blcak
+            }
+        }
+        @media print {
+            body {
+                background-color : black;
+                color : white
+            }
+        }
+    --> 위의 예제에는 일반 화면에선 orange 배경색에 black 글씨이지만, 프린트기로 인쇄를 하면 black 배경에 white 글자색으로 출력되게 된다.
+
+</pre>
 
     <hr style="clear: both;">
     <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
