@@ -1,0 +1,357 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+        /* 구역 설정 */
+        div {
+            height: 50%;
+            width: 50;
+        }
+
+        /* @keyframes 이동 */
+        .box {
+            height: 50px;
+            width: 150px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            -webkit-animation-name: box-move;
+            -webkit-animation-duration: 2s;
+            animation-name: box-move;
+            animation-duration: 2s;
+        }
+
+        @-webkit-keyframes box-move {
+            from { margin-left:100%;}
+            to { margin-left: 0%;}
+        }
+        @keyframes box-move {
+            from { margin-left: 100%;}
+            to { margin-left: 0%;}
+        }
+
+        /* @keyframes 테두리 */
+        .box2 {
+            height: 150px;
+            width: 150px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            -webkit-animation-name: box-border;
+            -webkit-animation-duration: 5s;
+            animation-name: box-border;
+            animation-duration: 5s;
+        }
+        @-webkit-keyframes box-border {
+            0% { border-color: red;}
+            20% { border-color: orange;}
+            40% { border-color : yellow;}
+            60% { border-color : green;}
+            80% { border-color : gray;}
+            100% { border-color: hotpink;}
+        }
+        @keyframes box-border {
+            
+            0% { border-color: red;}
+            20% { border-color: orange;}
+            40% { border-color : yellow;}
+            60% { border-color : green;}
+            80% { border-color : gray;}
+            100% { border-color: hotpink;}
+        }
+
+        /* 이동, 테두리색변경, animation-delay 시간지연 */
+        .box3 {
+            height: 150px;
+            width: 150px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            -webkit-animation-name: box-delay;
+            -webkit-animation-duration: 5s;
+            animation-name: box-delay;
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        @-webkit-keyframes box-delay {
+            from { margin-left: 100%;}
+            to{ margin-left: 0%;}
+            0% { border-color: red; transform: rotateY(0deg);}
+            20% { border-color: orange;transform: rotateY(180deg);}
+            40% { border-color : yellow;transform: rotateY(360deg);}
+            60% { border-color : green;transform: rotateY(0deg);}
+            80% { border-color : gray;transform: rotateY(180deg);}
+            100% { border-color: hotpink;transform: rotateY(360deg);}
+        }
+        @keyframes box-delay {
+            from { margin-left: 100%;}
+            to{ margin-left: 0%;}
+            0% { border-color: red; transform: rotateY(0deg);}
+            20% { border-color: orange;transform: rotateY(180deg);}
+            40% { border-color : yellow;transform: rotateY(360deg);}
+            60% { border-color : green;transform: rotateY(0deg);}
+            80% { border-color : gray;transform: rotateY(180deg);}
+            100% { border-color: hotpink;transform: rotateY(360deg);}
+        }
+
+        /* animation-iteration-count 구간반복*/
+        .box4 {
+            height: 150px;
+            width: 150px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            -webkit-animation-name: box-repeat;
+            -webkit-animation-duration: 5s;
+            animation-name: box-repeat;
+            animation-duration: 5s;
+            display: inline-block;
+        }
+        @-webkit-keyframes box-repeat {
+            0% { border-color: red; transform: rotateY(0deg);}
+            20% { border-color: orange;transform: rotateY(180deg);}
+            40% { border-color : yellow;transform: rotateY(360deg);}
+            60% { border-color : green;transform: rotateY(0deg);}
+            80% { border-color : gray;transform: rotateY(180deg);}
+            100% { border-color: hotpink;transform: rotateY(360deg);}
+        }
+        @keyframes box-repeat {
+            0% { border-color: red; transform: rotateY(0deg);}
+            20% { border-color: orange;transform: rotateY(180deg);}
+            40% { border-color : yellow;transform: rotateY(360deg);}
+            60% { border-color : green;transform: rotateY(0deg);}
+            80% { border-color : gray;transform: rotateY(180deg);}
+            100% { border-color: hotpink;transform: rotateY(360deg);}
+        }
+        .two {
+            -webkit-animation-iteration-count: 2;
+            animation-iteration-count: 2;
+        }
+        .infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        /* animation-direction (진행방향) */
+        .box5 {
+            height: 300px;
+            width: 300px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 150px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            -webkit-animation-name: box-go;
+            -webkit-animation-duration: 2s;
+            animation-name: box-go;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes box-go {
+            from { transform: rotate(0deg);}
+            to { transform: rotate(360deg);}
+        }
+        @keyframes box-go {
+            from { transform: rotate(0deg);}
+            to { transform: rotate(360deg);}
+        }
+        .alter {
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        .backward {
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        /* animation-timing-function (시간당 속도) */
+        .box6 {
+            height: 100px;
+            width: 100px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            text-align: center;
+            -webkit-animation: box-speed 3s ease 0s alternate infinite;
+            animation: box-speed 3s ease 0s alternate infinite;
+        }
+        .linear {
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+
+        }
+        .ease {
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+        }
+        .ease-in {
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        .ease-out {
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        .ease-in-out {
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+        @-webkit-keyframes box-speed {
+            from { margin-left: 0%;}
+            to { margin-left: 50%;}
+        }
+        @keyframes box-speed {
+            from { margin-left: 0%;}
+            to { margin-left: 50%;}
+        }
+        @-webkit-keyframes box-speed {
+            from { margin-left: 0%;}
+            to { margin-left: 50%;}
+        }
+        @keyframes box-speed {
+            from { margin-left: 0%;}
+            to { margin-left: 50%;}
+        }
+
+        /* 한줄로 요약하기 */
+        .box7 {
+            height: 300px;
+            width: 300px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            border-radius: 150px;
+            box-shadow: 0px 10px 10px 0px black;
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+        }
+        @-webkit-keyframes mixAndone{
+            from { transform: rotate(0deg); margin-left: 0%;}
+            to { transform: rotate(360deg); margin-left: 50%;}
+        }
+        @keyframes mixAndone {
+            from { transform: rotate(0deg); margin-left: 0%;}
+            to { transform: rotate(360deg); margin-left: 50%;}
+        }
+        .six {
+            -webkit-animation-name: mixAndone;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            animation-name: mixAndone;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .one {
+            animation: mixAndone 3s ease-in-out 1s infinite alternate;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- @keyframes (좌측에서 우측으로 이동 효과) -</h1>
+    <p> &plus; 특정 규칙을 만들어 두고 해당요소의 스타일이 특정 시간까지 서서히 변화하는 과정 </p>
+    <div>
+        <div class="box infinite"> 오른쪽에서 왼쪽으로 이동 (1초)</div>
+    </div>
+
+    <hr>
+    <h1>- @keyframes (테두리 색깔 변경) -</h1>
+    <p> &plus; 특정 규칙을 만들어 두고 해당요소의 테두리가 색깔별로 변경됨 </p>
+    <div>
+        <div class="box2 infinite"> 테두리 색깔 변경</div>
+    </div>
+
+    <hr>
+    <h1>- animation-delay (딜레이) -</h1>
+    <p> &plus; 특정 규칙을 만들어 두고 해당요소의 효과가 나오기까지 시간을 지연시킨다 </p>
+    <div>
+        <div class="box3"> 2초뒤 실행된다</div>
+    </div>
+
+    <hr>
+    <h1>- animation-iteration-count (구간반복) -</h1>
+    <p> &plus; 특정 규칙을 만들어 두고 해당요소의 효과가 얼마만큼 반복하는지 정한다 </p>
+    <div>
+        <div class="box4 two"> 2번 반복한다</div>
+        <div class="box4 infinite"> 계속 반복한다</div>
+    </div>
+
+    <hr>
+    <h1>- animation-direction (진행 방향) -</h1>
+    <p> &plus; 특정 규칙을 만들어 두고 해당요소의 진행방향을 정한다 (설정없음, revers, alternate) </p>
+    <div>
+        <div class="box5 infinite"> 정방향 </div>
+        <div class="box5 backward infinite"> 역방향</div>
+        <div class="box5 alter infinite"> 정방향 갔다가 역방향</div>
+    </div>
+
+    <hr>
+    <h1>- animation-timing-function (시간당 속도) -</h1>
+    <p> &plus; 해당요소의 애니메이션 효과 시간당 속도를 설정 </p>
+    <div>
+        <div class="box6 linear infinite"> linear </div>
+        <div class="box6 ease"> ease </div>
+        <div class="box6 ease-in"> ease-in </div>
+        <div class="box6 ease-out"> ease-out </div>
+        <div class="box6 ease-in-out"> ease-in-out </div>
+    </div>
+
+    <hr>
+    <h1>- 모든내용 압축하기 -</h1>
+    <p> &plus; 위의 모든 태그를 하나의 요소에 담을수 있다. </p>
+    <div>
+        <div class="box7 six"> 6개 전부 써놓음 </div>
+        <div class="box7 one"> animation 한줄로 요약 </div>
+    </div>
+    
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 기본 플렉스 박스 */
+        .box {
+            background-color: dimgray;
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .small-box {
+            background-color: darkgray;
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        /* rtl로 배치 */
+        .right {
+            direction: rtl;
+        }
+
+        /* row-reverse */
+        #rowreverse {
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            
+        }
+
+        /* column-reverse */
+        .column {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+        #columnreverse {
+            -webkit-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        }
+
+        /* justify-content */
+        .end {
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+        .center {
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+        .around {
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+        }
+        .between {
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+        }
+        /* align-items */
+        .stretch {
+            -webkit-align-items: stretch;
+            align-items: stretch;
+        }
+        .align-start {
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+        }
+        .align-end {
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+        }
+        .align-center {
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .baseline {
+            -webkit-align-items: baseline;
+            align-items: baseline;
+        }
+
+        /* flex-wrap */
+        .wrap-box {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: dimgray;
+            display: -webkit-flex;
+            display: flex;
+            display: -webkit-wrap;
+            display: wrap;
+        }
+        .wrap {
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .wrap-reverse {
+            -webkit-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
+        }
+
+        /* align-content */
+        .wrap-small-box {
+            background-color: darkgray;
+            border-radius: 10px;
+            width: 80px;
+            height: 50px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        #ac-start {
+            -webkit-align-content: flex-start;
+            align-content: flex-start;
+        }
+        #ac-end {
+            -webkit-align-content: flex-end;
+            align-content: flex-end;
+        }
+        #ac-center {
+			-webkit-align-content: center;
+			align-content: center;
+        }
+        #ac-space-between {
+            -webkit-align-content: space-between;
+            align-content: space-between;
+        }
+        #ac-space-around {
+            -webkit-align-content: space-around;
+            align-content: space-around;
+        }
+
+        /* flex-item 의 order */
+        .order {
+            -webkit-order: -1;
+            order: -1;
+        }
+
+        /* flex-margin */
+        #first .small-box:nth-child(1){
+            margin-right: auto;
+        }
+        #second .small-box:nth-child(2){
+            margin-right: auto;
+        }
+        #center {
+            margin: auto;
+        }
+
+        /* align-self */
+        .self-box {
+            background-color: darkgray;
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        .self-box:nth-child(2) {
+            -webkit-align-self: flex-start;
+            align-self: flex-start;
+        }
+        .self-box:nth-child(3) {
+            -webkit-align-self: flex-end;
+            align-self: flex-end;
+        }
+        .self-box:nth-child(4) {
+            -webkit-align-self: center;
+            align-self: center;
+        }
+        .self-box:nth-child(5) {
+            -webkit-align-self: baseline;
+            align-self: baseline;
+        }
+
+        /* flex-width */
+        .width-box {
+            background-color: darkgray;
+            border-radius: 10px;
+            width: 80px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            font-size: 20px;
+        }
+        .width-box:nth-child(1) {
+            -webkit-flex: 3;
+            flex: 3;
+        }
+        .width-box:nth-child(2) {
+            -webkit-flex: 1;
+            flex: 1;
+        }
+        .width-box:nth-child(3) {
+            -webkit-flex: 1;
+            flex: 1;
+        }
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+    <h1>- 기본 플렉스 박스 -</h1>
+    <p> &plus; 가장 기본적인 형태</p>
+    <div class="box">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- direction으로 오른쪽 배치하기 -</h1>
+    <p> &plus; rtl로 내부 아이템 오른쪽부터 배치</p>
+    <div class="box right">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- row-reverse -</h1>
+    <p> &plus; 배치를 반대로 해준다</p>
+    <div class="box">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <br>
+    <div class="box" id="rowreverse">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- column-reverse -</h1>
+    <p> &plus; 새로방향시 위치를 바꿔준다</p>
+    <div class="box column">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <br>
+    <div class="box column" id="columnreverse">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- justify-content -</h1>
+    <p> &plus; 내부 content의 정렬방법</p>
+    <h3>flex-end : 끝자락으로 보낸다</h3>
+    <div class="box end">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <h3>center : 중앙정렬</h3>
+    <div class="box center">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <h3>space-around : 앞 뒤 , 요소 사이에 여백을 둔다</h3>
+    <div class="box around">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <h3>space-between : 요소 사이에만 여백을 둔다</h3>
+    <div class="box between">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- flex-wrap -</h1>
+    <p> &plus; 더이상 여유공간이 없을때 줄 넘길지 정한다</p>
+    <h3>wrap : 줄 넘기기</h3>
+    <div class="wrap-box wrap">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <h3>wrap-reverse : 아래로 넘기는게 아닌 위로 넘긴다</h3>
+    <div class="wrap-box wrap-reverse">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+
+    <hr>
+    <h1>- align-content -</h1>
+    <p> &plus; flex-wrap 속성의 동작을 변경</p>
+    <h3> flex-start : 앞쪽에 뭉치게 해준다</h3>
+    <div class="wrap-box wrap" id="ac-start">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+    <h3> flex-end : 아래에 뭉치게 해준다</h3>
+    <div class="wrap-box wrap" id="ac-end">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+    <h3> center : 중앙에 뭉치게 해준다</h3>
+    <div class="wrap-box wrap" id="ac-center">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+    <h3> space-between : flex container에 골고루 분포</h3>
+    <div class="wrap-box wrap" id="ac-space-between">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+    <h3> space-around : flex container에 골고루 분포. 단 양 끝에는 공간을 둔다</h3>
+    <div class="wrap-box wrap" id="ac-space-around">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+
+    <hr>
+    <h1>- flexitem의 order 속성 -</h1>
+    <p> &plus; flex container 안의 flex 요소의 위치를 설정</p>
+    <h3> flex-start : 앞쪽에 뭉치게 해준다</h3>
+    <div class="wrap-box wrap">
+        <div class="wrap-small-box">1</div>
+        <div class="wrap-small-box">2</div>
+        <div class="wrap-small-box">3</div>
+        <div class="wrap-small-box order">4</div>
+        <div class="wrap-small-box">5</div>
+        <div class="wrap-small-box">6</div>
+    </div>
+
+    <hr>
+    <h1>- flex-margin -</h1>
+    <p> &plus; flex 요소에 수평으로 여유 공간을 없애거나 요소들을 서로 반대 방향으로 밀어내 위치시킬수 있다.</p>
+    <div class="box" id="first">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <br>
+    <div class="box" id="second">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+    </div>
+    <p> &plus; margin으로 flex 요소를 중앙에 배치시킬수 있다.</p>
+    <div class="box" id="first">
+        <div class="small-box" id="center">center</div>
+    </div>
+
+    <hr>
+    <h1>- align-self -</h1>
+    <p> &plus; align-item 보다 우선 적용되며 요소마다 다른 algin 속성값을 설정할수 있다.</p>
+    <div class="box">
+        <div class="self-box">1</div>
+        <div class="self-box">2</div>
+        <div class="self-box">3</div>
+        <div class="self-box">4</div>
+        <div class="self-box">5</div>
+    </div>
+
+    <hr>
+    <h1>- flex 속성 -</h1>
+    <p> &plus; flex요소의 너비를 상대적으로 설정할수 있다.</p>
+    <div class="box">
+        <div class="width-box">1</div>
+        <div class="width-box">2</div>
+        <div class="width-box">3</div>
+
+    </div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

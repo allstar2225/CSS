@@ -1,0 +1,160 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        div {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* column=count */
+        .col-3 {
+            margin: 30px 0;
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+
+        /* column-span */
+        .merge {
+            -webkit-column-span: all;
+            column-span: all;
+        }
+
+        /* column-rule-style */
+        .style {
+            -webkit-column-rule-style: solid;
+            -webkit-column-rule-width: 5px;
+            -webkit-column-rule-color: red;
+            column-rule-style: solid;
+            column-rule-width: 5px;
+            column-rule-color: red;
+        }
+
+        /* 한줄 요약 */
+        .mix {
+            -webkit-column-rule: 5px solid #6459ed;
+            -moz-column-rule: 5px solid #6459ed;
+            column-rule: 5px solid #6459ed;
+        }
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- column-count -</h1>
+    <p> &plus; 몇개의 칼럼을 만들지 결정한다.</p>
+    <div class="col-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+
+    <hr>
+    <h1>- column-span -</h1>
+    <p> &plus; 행의 칼럼수를 병합한다</p>
+    <div class="col-3">
+        <h6>원래 크기의 칼럼</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+    <div class="col-3">
+        <h1 class="merge">3줄 병합한 칼럼의 문구</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+
+    <hr>
+    <h1>- column-rule-style / column-rule-width / column-rule-color -</h1>
+    <p> &plus; 칼럼 중간에 라인을 그어주고, 두께 설정하고, 색깔을 맞춘다</p>
+    <div class="col-3">
+        <h6>기본 칼럼</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+    <div class="col-3 style">
+        <h1 class="merge">스타일 적용</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+
+    <hr>
+    <h1>- mix -</h1>
+    <p> &plus; 위의 모든걸 한줄로 요약할수 있다.</p>
+    <div class="col-3">
+        <h6>기본 칼럼</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+    <div class="col-3 mix">
+        <h1 class="merge">스타일 적용</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim magna et iaculis molestie. Vivamus
+            semper gravida magna, non imperdiet nisl viverra vitae. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nunc tristique cursus dui at facilisis. Maecenas mollis dui tortor, non elementum libero
+            condimentum vulputate. Phasellus eget sagittis felis. Quisque ornare et risus ac sodales. Phasellus
+            malesuada efficitur mattis. In hac habitasse platea dictumst. Ut enim sem, placerat id sagittis tristique,
+            posuere ac mi. Cras et efficitur magna. Vestibulum in nulla feugiat, sodales libero quis, molestie urna.
+            Praesent laoreet at augue in interdum. Duis et mauris at lacus tempus fringilla.</p>
+    </div>
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>

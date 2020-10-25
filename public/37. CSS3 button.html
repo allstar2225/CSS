@@ -1,0 +1,284 @@
+<!-- HTML 5 선언 -->
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 
+        meta 설명
+        문자셋 
+        검색 엔진용 참조
+        설명
+        저작권자
+        모바일 용 화면비율
+    -->
+    <meta charset="UTF-8">
+    <meta name="keyword" content="CSS">
+    <meta name="description" content="첫 시작">
+    <meta name="author" content="chohyunsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        #id {}
+
+        .class {}
+
+        /* 구역 설정 */
+        div {
+            height: 50%;
+            width: 50;
+            
+        }
+
+        /* trasition 버튼 */
+        .btn {
+            background-color: blue;
+            width: 5%;
+            padding: 10px;
+            margin: 10px 1px 20px 50px;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.6;
+            text-decoration: none;
+            border :none;
+            display: inline-block;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1;
+        }
+
+        .btn:hover {
+            background-color: indianred;
+            color: white;
+            box-shadow: 10px 5px 10px 0px hotpink;
+            -webkit-transform: scale3d(1.5,1.5,1);
+            transform: scale3d(1.5,1.5,1);
+        }
+
+        /* 사용 가능 불가능 버튼 */
+        .btn1 {
+            background-color: blue;
+            width: 5%;
+            padding: 10px;
+            margin: 10px 1px 20px 50px;
+            box-shadow: 10px 5px 10px 0px black;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.6;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border:none;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1;
+        }
+        .btnO:hover {
+            background-color: indianred;
+            color: white;
+            -webkit-transform: scale3d(1.5,1.5,1);
+            transform: scale3d(1.5,1.5,1);
+        }
+        .btnX {
+            background-color: teal;
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+         /* 메뉴 만들기 */
+        .form {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-btn {
+            background-color: teal;
+            color: white;
+            padding: 10px;
+            border: none;
+            opacity: 0.6;
+            cursor: pointer;
+            border-radius: 5px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+
+        .menu-content {
+            display: none;
+            margin-top: 5px;
+            background-color: thistle;
+            border-radius: 10px;
+            min-width: 200px;
+            padding: 5px;
+            box-shadow: 0px 9px 20px 0px black;
+            -webkit-animation-name: scroll;
+            -webkit-animation-duration: 1s;
+            animation-name: scroll;
+            animation-duration: 1s;
+        }
+
+
+        .menu-content a {
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+            font-size: 10px;
+        }
+
+        .form:hover .menu-content {
+            display: block;
+
+        }
+        @keyframes scroll {
+            from { margin-top: 50%;}
+            to { margin-top: 0%;}
+        }
+
+        .menu-btn:hover {
+            background-color: #dd3c3c;
+            color: black;
+            -webkit-transform: scale3d(1.2,1.2,3);
+            transform: scale3d(1.2,1.2,3);
+            
+        }
+
+        .menu-content a:hover {
+            background-color: teal;
+            color: white;
+        }
+
+        /* animation button */
+        /* 
+        1. 버튼의 전체모델 만들기
+        2. 버튼 내부의 span의 레이아웃 및 위치 전환효과 넣기
+        3. 버튼의 span뒤에 붙을 콘텐츠 넣기 ( 절대위치와 투명도로 위치에 넣기 )
+        4. 버튼에 마우스를 올렸을때 span을 왼쪽으로 밀기
+        5. 버튼에 마우스를 올렸을때 span다음으로 붙는 콘텐츠의 투명도와 오른쪽 패딩 0
+         */
+        .ani-btn {
+            background-color: orange;
+            width: 150px;
+            height: 75px;
+            box-shadow: 1px 5px 25px 0px black;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .ani-btn span {
+            display: inline-block;
+            position: relative;
+            transition: 1s;
+        }
+
+        .ani-btn span::after {
+            content: "▶";
+            position: absolute;
+            transition: 1s;
+            font-size: 30px;
+            opacity: 0;
+            transition: 1s;
+            top: -5px;
+            right: -22px;
+        }
+
+        
+        .ani-btn:hover span {
+            padding-right: 30px;
+        }
+
+        .ani-btn:hover span::after {
+            opacity: 1;
+            right: 0px;
+        }
+
+        /* 타격감 있는 버튼 */
+        /* 
+            1. 버튼의 틀 잡기 ( 배경색, 너비, 높이, 테두리선 없애기, 테두리 곡선, 박스 그림자, 커서 손모양, 글자꾸미기 없음, 외부선 없음, 글자 중앙)
+            2. 버튼에 커서를 올릴때
+            3. 버튼을 눌렀을때 
+         */
+        .t-btn {
+            background-color: blanchedalmond;
+            width: 150px;
+            height: 75px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px  9px black;
+            cursor: pointer;
+            text-decoration: none;
+            outline: none;
+            text-align: center;
+        }
+        .t-btn:hover {
+            background-color: orange;
+        }
+        .t-btn:active {
+            background-color: orange;
+            box-shadow: 0px 4px  black;
+            transform: translateY(4px);
+        }
+
+
+    </style>
+
+    <title> CSS tag 모음</title>
+
+</head>
+
+<body>
+
+    <h1>- trasition을 이용한 버튼 -</h1>
+    <p> &plus; hover로 색깔 변환 및 전환</p>
+    <div>
+        <button class="btn" type="button"> 버튼 </button>
+    </div>
+
+    <hr>
+    <h1>- 사용금지 버튼 -</h1>
+    <p> &plus; 버튼을 사용할수 없도록 한다</p>
+    <div>
+        <button class="btn1 btnO" type="button"> 사용 가능 </button>
+        <button class="btn1 btnX" type="button" disabled> 사용 불가능 </button>
+    </div>
+
+    <hr>
+    <h1>- 메뉴 버튼 -</h1>
+    <p> &plus; trasition 으로 메뉴를 만들어본다.</p>
+    <div class="form">
+        <button class="menu-btn" type="button">버튼1</button>
+        <div class="menu-content">
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴1</a>
+        </div>
+    </div>
+
+    <hr>
+    <h1>- animation 버튼 -</h1>
+    <p> &plus; animation을 활용하여 역동적인 버튼을 만든다</p>
+    <div>
+        <button class="ani-btn"><span>버튼</span></button>
+    </div>
+
+    <hr>
+    <h1>- 진짜 버튼같은 효과 -</h1>
+    <p> &plus; 누르는 타격감이 있는 버튼 </p>
+    <div>
+        <button class="t-btn" type="button"><span>버튼</span></button>
+    </div>
+    <br>
+
+
+
+    <hr style="clear: both;">
+    <p style="clear: both;"><a href="../index.html"> 첫페이지로</a></p>
+</body>
+
+</html>
